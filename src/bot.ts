@@ -205,7 +205,7 @@ function getSettingMessage(ctx: MyContext) {
 
     *💰 Bounty Type*: ${bountyType}\\.
 
-    *🎯 Skills*: ${session.skills.join("\\,")}\\.
+    *🎯 Skills*: ${session.skills.join("\\, ").replace("++","\\+\\+")}\\.
 
     *📧 Enable Notifications*: ${isEnableNotification}\\.
 
@@ -230,19 +230,29 @@ function getSettingMessage(ctx: MyContext) {
 function replyEditSettings(ctx: MyContext) {
     ctx.session.hasSet = true;
     let { message, settingsInlineKeyboard} = getSettingMessage(ctx);
-    ctx.editMessageText(message,{
-        parse_mode: "MarkdownV2",
-        reply_markup: settingsInlineKeyboard,
-    });
+    try {
+        ctx.editMessageText(message,{
+            parse_mode: "MarkdownV2",
+            reply_markup: settingsInlineKeyboard,
+        });
+    } catch (err) {
+        console.error("Some thing happend", err);
+        replySettings(ctx);
+    }
 }
 
 function replySettings(ctx: MyContext) {
     ctx.session.hasSet = true;
     let { message, settingsInlineKeyboard} = getSettingMessage(ctx);
-    ctx.reply(message, {
+    try {
+        ctx.reply(message, {
         parse_mode: "MarkdownV2",
         reply_markup: settingsInlineKeyboard,
     });
+    } catch (err) {
+        console.error("Some thing happend", err);
+        replyStart(ctx);
+    }
 }
 
 function editReplyBountyType(ctx: any) {
