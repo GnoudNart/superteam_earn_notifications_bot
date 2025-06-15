@@ -1,25 +1,19 @@
-// src/database.ts
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-/**
- * Interface cho cấu trúc người dùng trong database của bạn.
- * Đồng bộ với model User trong schema.prisma
- */
 interface User {
   id: string;
-  chatId: bigint; // Sử dụng bigint cho chatId
+  name: string;
+  email: string;
+  telegramId: bigint;
+  chatId: bigint; // Using bigint for chatId
   isEnableNoti: boolean;
   createdAt: Date;
   updatedAt: Date;
-  // ... các trường khác nếu có
 }
 
-/**
- * Lấy danh sách Telegram Chat IDs của tất cả người dùng đã bật thông báo.
- * @returns {Promise<number[]>} Một mảng các chat IDs.
- */
+
 export async function getUserIdsFromDatabase(): Promise<number[]> {
   try {
     const enabledUsers = await prisma.user.findMany({

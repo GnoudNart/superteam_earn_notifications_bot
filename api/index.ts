@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 import { webhookHandler } from '../src/bot';
 import { bot, MyContext } from '../src/bot';
-import { getUserIdsFromDatabase, checkDatabaseConnection, prisma } from '../src/database'; // Import checkDatabaseConnection và prisma
+import { getUserIdsFromDatabase, checkDatabaseConnection, prisma } from '../src/database';
 
 // Create application/x-www-form-urlencoded parser
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
