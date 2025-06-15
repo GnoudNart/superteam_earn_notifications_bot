@@ -1,11 +1,10 @@
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
-import { User, SessionData, Notification } from './type'
+import { User, SessionData, NotificationData } from './type'
 
 const list_skill = ['Frontend', 'Backend', 'Blockchain', 'Mobile', 'Design', 'Community', 'Growth', 'Content', 'Other', 'React', 'Svelte', 'Angular', 'Vue', 'SolidJS', 'Redux', 'Elm', 'Javascript', 'Typescript', 'Node.js', 'PHP', 'Laravel', 'Python', 'Django', 'Kotlin', 'Swift', 'Java', 'C++', 'C', 'Ruby', 'Ruby on Rails', 'Go', 'MySQL', 'Postgres', 'MongoDB', 'Pearl', 'Scala', 'Elixir', 'Haskell', 'Erlang', 'Deno', 'Dart', 'ASP.NET', 'Rust', 'Solidity', 'Move', 'Android', 'iOS', 'Flutter', 'React Native', 'UI/UX Design', 'Graphic Design', 'Illustration', 'Game Design', 'Presentation Design', 'Community Manager', 'Discord Moderator', 'Business Development', 'Digital Marketing', 'Marketing', 'Research', 'Photography', 'Video', 'Video Editing', 'Writing', 'Social Media', 'Data Analytics', 'Operations', 'Product Feedback', 'Product Manager']
-
-const NEW_LISTING: Notification[] = [
+const NEW_LISTING: NotificationData[] = [
 {
     id: 'ffcbf5cc-99da-4ab1-ae72-b792cec83cfc',
     rewardAmount: 4000,
@@ -22,11 +21,14 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
+'Solidity',
+'Android',
 'Other',
-'Video Editing'
+'iOS'
     ],
-    region: 'FRANCE',
-    publishedAt: '2025-06-14T10:32:20.701Z'
+    region: 'JAPAN',
+    publishedAt: '2025-06-12T10:32:20.701Z',
+    sponsorName: 'Grit Labs'
   },
 {
     id: '27e31606-92be-41ba-a733-d3d81f500f70',
@@ -44,11 +46,16 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Pearl',
-'Other'
+'Graphic Design',
+'Javascript',
+'Postgres',
+'Angular',
+'Dart',
+'Flutter'
     ],
-    region: 'POLAND',
-    publishedAt: '2025-06-13T20:59:07.000Z'
+    region: 'INDIA',
+    publishedAt: '2025-06-14T20:59:07.000Z',
+    sponsorName: 'Kumeka Team'
   },
 {
     id: '89fc0d52-7474-4a7e-95d2-bb5ded29401e',
@@ -66,14 +73,14 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Vue',
-'Dart',
-'Operations',
-'Other',
-'C++'
+'Ruby',
+'Scala',
+'Redux',
+'Discord Moderator'
     ],
-    region: 'INDIA',
-    publishedAt: '2025-06-15T21:59:37.000Z'
+    region: 'KOREA',
+    publishedAt: '2025-06-13T21:59:37.000Z',
+    sponsorName: 'Dev.fun'
   },
 {
     id: 'd79f0356-7c55-44c1-a05c-fa18e3672e25',
@@ -91,10 +98,11 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Ruby on Rails'
+'Dart'
     ],
-    region: 'UKRAINE',
-    publishedAt: '2025-06-14T23:25:03.000Z'
+    region: 'CANADA',
+    publishedAt: '2025-06-14T23:25:03.000Z',
+    sponsorName: 'Superteam'
   },
 {
     id: '6946539a-206c-40e2-ad91-a63815e203d3',
@@ -112,15 +120,16 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Angular',
-'Scala',
-'Laravel',
+'Product Manager',
+'MySQL',
+'Deno',
 'C++',
-'Java',
-'Other'
+'Flutter',
+'Discord Moderator'
     ],
-    region: 'ISRAEL',
-    publishedAt: '2025-06-14T07:00:39.000Z'
+    region: 'TURKEY',
+    publishedAt: '2025-06-14T07:00:39.000Z',
+    sponsorName: 'Asgard Finance'
   },
 {
     id: 'd93d940e-49b7-482b-8cbb-5407e3f637c1',
@@ -138,14 +147,16 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Marketing',
-'Rust',
-'Other',
-'Java',
-'Svelte'
+'Graphic Design',
+'Product Feedback',
+'Erlang',
+'Move',
+'Game Design',
+'SolidJS'
     ],
-    region: 'PHILIPPINES',
-    publishedAt: '2025-06-15T11:00:49.557Z'
+    region: 'BALKAN',
+    publishedAt: '2025-06-14T11:00:49.557Z',
+    sponsorName: 'Credible Finance'
   },
 {
     id: 'b9a8fe38-7b96-492d-9bfa-0dae53f56477',
@@ -163,12 +174,14 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Product Manager',
+'Photography',
 'Other',
-'C'
+'Redux',
+'Social Media'
     ],
-    region: 'PHILIPPINES',
-    publishedAt: '2025-06-17T09:00:33.139Z'
+    region: 'GERMANY',
+    publishedAt: '2025-06-17T09:00:33.139Z',
+    sponsorName: 'Sanctum'
   },
 {
     id: 'bacd7dd4-e6e7-4625-ae7a-adb57d3e3f28',
@@ -186,11 +199,11 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'C++',
-'Other'
+'Video'
     ],
-    region: 'SPAIN',
-    publishedAt: '2025-06-15T21:11:32.927Z'
+    region: 'UK',
+    publishedAt: '2025-06-17T21:11:32.927Z',
+    sponsorName: 'Bad Environment Club'
   },
 {
     id: '7871a4cf-d99f-4f30-bd76-65cf39346cd4',
@@ -208,15 +221,16 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Game Design',
-'React Native',
-'Other',
-'Presentation Design',
-'MySQL',
-'Move'
+'Product Feedback',
+'Angular',
+'Video',
+'Laravel',
+'Python',
+'Svelte'
     ],
-    region: 'CANADA',
-    publishedAt: '2025-06-17T21:59:42.000Z'
+    region: 'SINGAPORE',
+    publishedAt: '2025-06-15T21:59:42.000Z',
+    sponsorName: 'Borgpad'
   },
 {
     id: 'fb1343d4-3e1f-4d48-9696-b034f2376399',
@@ -234,14 +248,16 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Redux',
-'Other',
-'UI/UX Design',
-'Community Manager',
-'Graphic Design'
+'Erlang',
+'Product Feedback',
+'Django',
+'Deno',
+'Dart',
+'Android'
     ],
-    region: 'BRAZIL',
-    publishedAt: '2025-06-18T10:25:59.000Z'
+    region: 'BALKAN',
+    publishedAt: '2025-06-18T10:25:59.000Z',
+    sponsorName: 'thesendcoin'
   },
 {
     id: '76afa4dd-43b2-4d94-9dcf-5c519fcc7fef',
@@ -259,15 +275,14 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Python',
-'Video Editing',
-'UI/UX Design',
-'Other',
-'C',
-'MySQL'
+'C++',
+'Dart',
+'Vue',
+'Kotlin'
     ],
-    region: 'IRELAND',
-    publishedAt: '2025-06-16T14:46:23.530Z'
+    region: 'TURKEY',
+    publishedAt: '2025-06-17T14:46:23.530Z',
+    sponsorName: 'Blue7'
   },
 {
     id: '759dc10c-9581-4893-b2b0-f453fc8998ba',
@@ -285,10 +300,12 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Photography'
+'iOS',
+'Go'
     ],
-    region: 'PHILIPPINES',
-    publishedAt: '2025-06-17T22:00:13.000Z'
+    region: 'UK',
+    publishedAt: '2025-06-17T22:00:13.000Z',
+    sponsorName: 'Bitget'
   },
 {
     id: '1fa39994-9ce1-4f1a-a745-e1e3905299ef',
@@ -306,13 +323,14 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Svelte',
-'Product Manager',
-'Erlang',
-'UI/UX Design'
+'C++',
+'Digital Marketing',
+'Node.js',
+'Data Analytics'
     ],
-    region: 'TURKEY',
-    publishedAt: '2025-06-17T12:28:49.000Z'
+    region: 'MALAYSIA',
+    publishedAt: '2025-06-18T12:28:49.000Z',
+    sponsorName: 'Solana Wallet Tracker'
   },
 {
     id: '8ff4860b-d00f-4cca-836c-b0228592c4e3',
@@ -330,13 +348,13 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Discord Moderator',
-'UI/UX Design',
-'Android',
-'Community Manager'
+'Digital Marketing',
+'Social Media',
+'Python'
     ],
-    region: 'VIETNAM',
-    publishedAt: '2025-06-19T06:59:40.000Z'
+    region: 'UKRAINE',
+    publishedAt: '2025-06-20T06:59:40.000Z',
+    sponsorName: 'Global Dollar Network'
   },
 {
     id: '1410bb0c-56b5-408c-a0be-487102de7960',
@@ -354,13 +372,14 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Product Manager',
-'Pearl',
-'Postgres',
-'Research'
+'Erlang',
+'Elixir',
+'Elm',
+'Game Design'
     ],
-    region: 'VIETNAM',
-    publishedAt: '2025-06-19T10:34:30.000Z'
+    region: 'INDIA',
+    publishedAt: '2025-06-19T10:34:30.000Z',
+    sponsorName: 'Globachain'
   },
 {
     id: '72640acb-02ae-41a4-bdc1-d7a918bafff8',
@@ -378,15 +397,11 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Android',
-'Elixir',
-'Ruby',
-'Python',
-'Product Feedback',
-'Other'
+'Typescript'
     ],
-    region: 'CANADA',
-    publishedAt: '2025-06-19T19:21:59.000Z'
+    region: 'GLOBAL',
+    publishedAt: '2025-06-18T19:21:59.000Z',
+    sponsorName: 'Sorcerer'
   },
 {
     id: 'a085ae72-fdff-4697-8574-0c6b8e4e2279',
@@ -404,12 +419,16 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'MySQL',
-'Pearl',
-'Other'
+'Go',
+'Other',
+'Graphic Design',
+'Redux',
+'ASP.NET',
+'Elm'
     ],
-    region: 'BALKAN',
-    publishedAt: '2025-06-19T20:30:11.140Z'
+    region: 'INDIA',
+    publishedAt: '2025-06-20T20:30:11.140Z',
+    sponsorName: 'Frontrun.pro'
   },
 {
     id: '9cf2d0bb-ac4d-4b09-9386-8034938b3594',
@@ -427,12 +446,12 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: 500,
     status: 'OPEN',
     skills: [
-'C',
-'Other',
-'Node.js'
+'Ruby',
+'Kotlin'
     ],
-    region: 'MEXICO',
-    publishedAt: '2025-06-23T06:51:46.572Z'
+    region: 'FRANCE',
+    publishedAt: '2025-06-21T06:51:46.572Z',
+    sponsorName: 'Hey Solana'
   },
 {
     id: 'd70976a9-554a-4e29-9769-5016376e2509',
@@ -450,13 +469,15 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Data Analytics',
-'Other',
-'Vue',
-'Android'
+'Writing',
+'Social Media',
+'SolidJS',
+'Graphic Design',
+'PHP'
     ],
-    region: 'GLOBAL',
-    publishedAt: '2025-06-23T10:00:25.000Z'
+    region: 'UKRAINE',
+    publishedAt: '2025-06-24T10:00:25.000Z',
+    sponsorName: 'Neon EVM'
   },
 {
     id: '59769d59-1e58-4965-92e2-bfa034a22680',
@@ -474,12 +495,13 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Discord Moderator',
 'Rust',
-'Community Manager'
+'MySQL',
+'Ruby on Rails'
     ],
-    region: 'UK',
-    publishedAt: '2025-06-24T18:10:55.505Z'
+    region: 'TURKEY',
+    publishedAt: '2025-06-24T18:10:55.505Z',
+    sponsorName: 'Magic Eden'
   },
 {
     id: 'beb3d206-8733-4a66-b8ea-ad0e327af752',
@@ -497,10 +519,13 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'UI/UX Design'
+'ASP.NET',
+'Business Development',
+'Rust'
     ],
     region: 'UKRAINE',
-    publishedAt: '2025-06-25T20:36:49.984Z'
+    publishedAt: '2025-06-24T20:36:49.984Z',
+    sponsorName: 'Owners Club '
   },
 {
     id: '8701c9bb-29af-4a0e-8734-48134f76e222',
@@ -518,10 +543,14 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: 2500,
     status: 'OPEN',
     skills: [
-'Other'
+'Other',
+'Svelte',
+'Ruby',
+'Product Feedback'
     ],
-    region: 'FRANCE',
-    publishedAt: '2025-06-25T23:05:27.741Z'
+    region: 'KOREA',
+    publishedAt: '2025-06-24T23:05:27.741Z',
+    sponsorName: 'Cryptowood'
   },
 {
     id: 'bf7fefa0-b5c3-4cfe-bb51-2c776877b0a3',
@@ -539,10 +568,13 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Deno'
+'Elixir',
+'Pearl',
+'Photography'
     ],
     region: 'ISRAEL',
-    publishedAt: '2025-06-27T12:48:58.000Z'
+    publishedAt: '2025-06-27T12:48:58.000Z',
+    sponsorName: 'BukProtocol'
   },
 {
     id: '65cfca17-c12a-4098-88d1-4de26dc29af4',
@@ -561,10 +593,12 @@ const NEW_LISTING: Notification[] = [
     status: 'OPEN',
     skills: [
 'Kotlin',
-'Scala'
+'Ruby',
+'Deno'
     ],
-    region: 'JAPAN',
-    publishedAt: '2025-06-27T16:59:48.000Z'
+    region: 'SINGAPORE',
+    publishedAt: '2025-06-26T16:59:48.000Z',
+    sponsorName: 'Superteam Vietnam'
   },
 {
     id: '3ed088f2-e555-408e-bb6e-b776ea12e4e9',
@@ -582,15 +616,13 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Discord Moderator',
-'Graphic Design',
-'Other',
-'Research',
-'Marketing',
-'Flutter'
+'Typescript',
+'Ruby',
+'Other'
     ],
-    region: 'CANADA',
-    publishedAt: '2025-06-29T17:59:43.000Z'
+    region: 'MEXICO',
+    publishedAt: '2025-06-27T17:59:43.000Z',
+    sponsorName: 'Superteam Vietnam'
   },
 {
     id: '9f9cc5be-832c-43fe-ba1f-cd76ceb9d827',
@@ -608,13 +640,13 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Elm',
-'Research',
-'Solidity',
-'Android'
+'Graphic Design',
+'Photography',
+'Other'
     ],
-    region: 'ISRAEL',
-    publishedAt: '2025-06-29T07:29:15.000Z'
+    region: 'POLAND',
+    publishedAt: '2025-06-30T07:29:15.000Z',
+    sponsorName: 'Superteam Nepal'
   },
 {
     id: '0817a1b9-73dc-4f53-aa3d-a7d68c688d95',
@@ -632,10 +664,11 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Rust'
+'Graphic Design'
     ],
-    region: 'ARGENTINA',
-    publishedAt: '2025-06-28T12:00:43.000Z'
+    region: 'SINGAPORE',
+    publishedAt: '2025-06-30T12:00:43.000Z',
+    sponsorName: 'Toby Network'
   },
 {
     id: 'df5c723e-ad60-440b-a70d-98d973aafd17',
@@ -653,15 +686,16 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Pearl',
-'Dart',
-'Move',
-'Product Feedback',
 'Other',
-'Svelte'
+'Video Editing',
+'Scala',
+'Elixir',
+'Illustration',
+'Other'
     ],
-    region: 'PHILIPPINES',
-    publishedAt: '2025-06-29T15:59:46.000Z'
+    region: 'BRAZIL',
+    publishedAt: '2025-06-30T15:59:46.000Z',
+    sponsorName: 'SecondSwap'
   },
 {
     id: '80e34ab3-58be-4196-93db-c998c6f2d9cc',
@@ -679,13 +713,11 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'SolidJS',
-'Scala',
-'Move',
-'Rust'
+'Product Feedback'
     ],
-    region: 'KOREA',
-    publishedAt: '2025-07-02T00:48:55.000Z'
+    region: 'UAE',
+    publishedAt: '2025-07-01T00:48:55.000Z',
+    sponsorName: 'Superteam Vietnam'
   },
 {
     id: 'd971600a-a57c-4c61-91ac-2aa5986ae3f0',
@@ -703,15 +735,14 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Other',
-'Scala',
-'Postgres',
-'C++',
-'Business Development',
-'Operations'
+'Vue',
+'Illustration',
+'Laravel',
+'Photography'
     ],
-    region: 'FRANCE',
-    publishedAt: '2025-07-06T08:38:57.000Z'
+    region: 'GERMANY',
+    publishedAt: '2025-07-05T08:38:57.000Z',
+    sponsorName: 'loofta'
   },
 {
     id: '3b622a31-d4bc-4b62-92be-9415fa8846fa',
@@ -729,14 +760,11 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Other',
-'Pearl',
-'Illustration',
-'Data Analytics',
-'Kotlin'
+'Social Media'
     ],
-    region: 'UKRAINE',
-    publishedAt: '2025-07-13T20:34:55.000Z'
+    region: 'TURKEY',
+    publishedAt: '2025-07-13T20:34:55.000Z',
+    sponsorName: 'Xandeum Labs'
   },
 {
     id: 'f48af639-74a0-4908-b32c-bb4641ce6e60',
@@ -754,14 +782,15 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: 400,
     status: 'OPEN',
     skills: [
-'Business Development',
-'Javascript',
+'Rust',
+'Svelte',
 'Other',
-'Product Feedback',
-'PHP'
+'Digital Marketing',
+'Haskell'
     ],
-    region: 'VIETNAM',
-    publishedAt: '2025-07-30T09:26:27.000Z'
+    region: 'SINGAPORE',
+    publishedAt: '2025-07-29T09:26:27.000Z',
+    sponsorName: 'Nomadz_co'
   },
 {
     id: 'c2b21caa-2b17-4b02-8312-9ec1e07ade34',
@@ -779,15 +808,11 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Java',
-'Other',
-'React',
-'C',
-'Laravel',
-'Rust'
+'Svelte'
     ],
-    region: 'KOREA',
-    publishedAt: '2025-08-29T00:52:45.000Z'
+    region: 'SPAIN',
+    publishedAt: '2025-08-31T00:52:45.000Z',
+    sponsorName: 'Upshot'
   },
 {
     id: '13f196f6-ed79-4fb1-b850-da2eb40983be',
@@ -805,11 +830,11 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'SolidJS',
-'MySQL'
+'Android'
     ],
-    region: 'UAE',
-    publishedAt: '2025-12-29T16:59:37.000Z'
+    region: 'GERMANY',
+    publishedAt: '2025-12-29T16:59:37.000Z',
+    sponsorName: 'AIxBlock'
   },
 {
     id: '86edbba0-2823-49e7-bd6a-9ee5d9c4160a',
@@ -827,15 +852,14 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Pearl',
-'Go',
-'Data Analytics',
-'iOS',
-'Operations',
-'Other'
+'Other',
+'Postgres',
+'Python',
+'Django'
     ],
-    region: 'UKRAINE',
-    publishedAt: '2025-06-14T16:00:06.000Z'
+    region: 'UAE',
+    publishedAt: '2025-06-15T16:00:06.000Z',
+    sponsorName: 'Superteam UK'
   },
 {
     id: '27e31606-92be-41ba-a733-d3d81f500f70',
@@ -853,11 +877,14 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Business Development',
-'Python'
+'ASP.NET',
+'Solidity',
+'PHP',
+'React'
     ],
-    region: 'MEXICO',
-    publishedAt: '2025-06-15T20:59:07.000Z'
+    region: 'INDIA',
+    publishedAt: '2025-06-13T20:59:07.000Z',
+    sponsorName: 'Kumeka Team'
   },
 {
     id: '89fc0d52-7474-4a7e-95d2-bb5ded29401e',
@@ -875,14 +902,12 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'C++',
-'Solidity',
-'ASP.NET',
-'Python',
-'Community Manager'
+'Django',
+'Kotlin'
     ],
-    region: 'ISRAEL',
-    publishedAt: '2025-06-14T21:59:37.000Z'
+    region: 'ARGENTINA',
+    publishedAt: '2025-06-14T21:59:37.000Z',
+    sponsorName: 'Dev.fun'
   },
 {
     id: '60f3c012-7cb2-492e-a18c-ee168539abd2',
@@ -900,11 +925,12 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Swift',
-'Other'
+'Pearl',
+'Photography'
     ],
-    region: 'MEXICO',
-    publishedAt: '2025-06-14T23:00:26.000Z'
+    region: 'GERMANY',
+    publishedAt: '2025-06-14T23:00:26.000Z',
+    sponsorName: 'Superteam UK'
   },
 {
     id: 'd79f0356-7c55-44c1-a05c-fa18e3672e25',
@@ -922,12 +948,16 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Redux',
-'Other',
-'Go'
+'Svelte',
+'Move',
+'Rust',
+'PHP',
+'Digital Marketing',
+'C'
     ],
-    region: 'ARGENTINA',
-    publishedAt: '2025-06-15T23:25:03.000Z'
+    region: 'TURKEY',
+    publishedAt: '2025-06-14T23:25:03.000Z',
+    sponsorName: 'Superteam'
   },
 {
     id: '6946539a-206c-40e2-ad91-a63815e203d3',
@@ -945,14 +975,12 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Social Media',
-'Ruby on Rails',
-'Pearl',
-'Operations',
-'Ruby'
+'React Native',
+'Vue'
     ],
-    region: 'GLOBAL',
-    publishedAt: '2025-06-16T07:00:39.000Z'
+    region: 'IRELAND',
+    publishedAt: '2025-06-15T07:00:39.000Z',
+    sponsorName: 'Asgard Finance'
   },
 {
     id: 'd93d940e-49b7-482b-8cbb-5407e3f637c1',
@@ -970,15 +998,11 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Erlang',
-'Data Analytics',
-'Other',
-'C',
-'Social Media',
-'Ruby'
+'Other'
     ],
-    region: 'IRELAND',
-    publishedAt: '2025-06-16T11:00:49.557Z'
+    region: 'CANADA',
+    publishedAt: '2025-06-14T11:00:49.557Z',
+    sponsorName: 'Credible Finance'
   },
 {
     id: 'b9a8fe38-7b96-492d-9bfa-0dae53f56477',
@@ -996,13 +1020,15 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'ASP.NET',
-'Other',
+'Game Design',
+'MySQL',
 'Node.js',
-'Erlang'
+'SolidJS',
+'Other'
     ],
-    region: 'NIGERIA',
-    publishedAt: '2025-06-15T09:00:33.139Z'
+    region: 'SINGAPORE',
+    publishedAt: '2025-06-16T09:00:33.139Z',
+    sponsorName: 'Sanctum'
   },
 {
     id: 'bacd7dd4-e6e7-4625-ae7a-adb57d3e3f28',
@@ -1020,14 +1046,13 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Presentation Design',
-'Go',
-'Ruby',
-'Python',
-'Angular'
+'MongoDB',
+'Solidity',
+'Graphic Design'
     ],
-    region: 'JAPAN',
-    publishedAt: '2025-06-17T21:11:32.927Z'
+    region: 'VIETNAM',
+    publishedAt: '2025-06-17T21:11:32.927Z',
+    sponsorName: 'Bad Environment Club'
   },
 {
     id: '7871a4cf-d99f-4f30-bd76-65cf39346cd4',
@@ -1045,13 +1070,13 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'MySQL',
-'Typescript',
-'React',
-'Laravel'
+'Pearl',
+'Move',
+'Photography'
     ],
-    region: 'UAE',
-    publishedAt: '2025-06-17T21:59:42.000Z'
+    region: 'POLAND',
+    publishedAt: '2025-06-17T21:59:42.000Z',
+    sponsorName: 'Borgpad'
   },
 {
     id: 'fb1343d4-3e1f-4d48-9696-b034f2376399',
@@ -1069,12 +1094,14 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Flutter',
-'Other',
-'Digital Marketing'
+'Redux',
+'Writing',
+'C++',
+'Other'
     ],
-    region: 'ISRAEL',
-    publishedAt: '2025-06-17T10:25:59.000Z'
+    region: 'ARGENTINA',
+    publishedAt: '2025-06-16T10:25:59.000Z',
+    sponsorName: 'thesendcoin'
   },
 {
     id: '76afa4dd-43b2-4d94-9dcf-5c519fcc7fef',
@@ -1092,13 +1119,15 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Other',
-'React',
-'Operations',
-'Python'
+'Community Manager',
+'Node.js',
+'Deno',
+'Business Development',
+'Other'
     ],
-    region: 'KOREA',
-    publishedAt: '2025-06-16T14:46:23.530Z'
+    region: 'IRELAND',
+    publishedAt: '2025-06-16T14:46:23.530Z',
+    sponsorName: 'Blue7'
   },
 {
     id: '759dc10c-9581-4893-b2b0-f453fc8998ba',
@@ -1116,12 +1145,15 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Postgres',
-'Vue',
-'Discord Moderator'
+'Rust',
+'Java',
+'Dart',
+'React Native',
+'Video Editing'
     ],
-    region: 'ARGENTINA',
-    publishedAt: '2025-06-16T22:00:13.000Z'
+    region: 'SPAIN',
+    publishedAt: '2025-06-16T22:00:13.000Z',
+    sponsorName: 'Bitget'
   },
 {
     id: '1fa39994-9ce1-4f1a-a745-e1e3905299ef',
@@ -1139,13 +1171,12 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Game Design',
-'Discord Moderator',
-'Graphic Design',
-'iOS'
+'Community Manager',
+'Product Manager'
     ],
-    region: 'UAE',
-    publishedAt: '2025-06-18T12:28:49.000Z'
+    region: 'CANADA',
+    publishedAt: '2025-06-18T12:28:49.000Z',
+    sponsorName: 'Solana Wallet Tracker'
   },
 {
     id: '8ff4860b-d00f-4cca-836c-b0228592c4e3',
@@ -1163,15 +1194,16 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Product Feedback',
+'Java',
 'Kotlin',
-'Rust',
-'Typescript',
-'Flutter',
-'Postgres'
+'C++',
+'C',
+'Python',
+'SolidJS'
     ],
-    region: 'POLAND',
-    publishedAt: '2025-06-18T06:59:40.000Z'
+    region: 'INDIA',
+    publishedAt: '2025-06-19T06:59:40.000Z',
+    sponsorName: 'Global Dollar Network'
   },
 {
     id: '1410bb0c-56b5-408c-a0be-487102de7960',
@@ -1189,15 +1221,16 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Scala',
-'Game Design',
-'Javascript',
-'C',
-'Typescript',
-'Elm'
+'Marketing',
+'React',
+'MySQL',
+'Other',
+'React Native',
+'Typescript'
     ],
-    region: 'GERMANY',
-    publishedAt: '2025-06-20T10:34:30.000Z'
+    region: 'PHILIPPINES',
+    publishedAt: '2025-06-19T10:34:30.000Z',
+    sponsorName: 'Globachain'
   },
 {
     id: '72640acb-02ae-41a4-bdc1-d7a918bafff8',
@@ -1215,11 +1248,15 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Game Design',
-'UI/UX Design'
+'Data Analytics',
+'Video Editing',
+'Marketing',
+'Other',
+'PHP'
     ],
-    region: 'USA',
-    publishedAt: '2025-06-19T19:21:59.000Z'
+    region: 'IRELAND',
+    publishedAt: '2025-06-20T19:21:59.000Z',
+    sponsorName: 'Sorcerer'
   },
 {
     id: 'a085ae72-fdff-4697-8574-0c6b8e4e2279',
@@ -1237,15 +1274,16 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Other',
-'Ruby',
-'Operations',
-'Other',
-'Javascript',
-'Scala'
+'Android',
+'Illustration',
+'Deno',
+'Solidity',
+'Swift',
+'Javascript'
     ],
-    region: 'PHILIPPINES',
-    publishedAt: '2025-06-18T20:30:11.140Z'
+    region: 'INDIA',
+    publishedAt: '2025-06-18T20:30:11.140Z',
+    sponsorName: 'Frontrun.pro'
   },
 {
     id: 'a24e1aec-86e7-47f9-9b6a-575627afed53',
@@ -1263,11 +1301,12 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: 1500,
     status: 'OPEN',
     skills: [
-'Dart',
-'Product Manager'
+'MySQL',
+'React'
     ],
-    region: 'UKRAINE',
-    publishedAt: '2025-06-20T22:41:22.758Z'
+    region: 'INDIA',
+    publishedAt: '2025-06-19T22:41:22.758Z',
+    sponsorName: 'Cryptowood'
   },
 {
     id: '7d47c4e0-8732-449c-bd1d-a6206db694fa',
@@ -1285,12 +1324,14 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Product Manager',
-'Python',
-'Ruby'
+'SolidJS',
+'Javascript',
+'Video Editing',
+'MongoDB'
     ],
-    region: 'BRAZIL',
-    publishedAt: '2025-06-21T10:00:24.000Z'
+    region: 'GLOBAL',
+    publishedAt: '2025-06-20T10:00:24.000Z',
+    sponsorName: 'Sanafi Onchain'
   },
 {
     id: '91275810-efa8-4712-94b4-3e4ca0aa8d6b',
@@ -1308,10 +1349,13 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Typescript'
+'Writing',
+'Flutter',
+'Android'
     ],
-    region: 'UKRAINE',
-    publishedAt: '2025-06-22T00:00:36.000Z'
+    region: 'PHILIPPINES',
+    publishedAt: '2025-06-20T00:00:36.000Z',
+    sponsorName: 'LastMint'
   },
 {
     id: '9cf2d0bb-ac4d-4b09-9386-8034938b3594',
@@ -1329,10 +1373,15 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: 500,
     status: 'OPEN',
     skills: [
-'Elixir'
+'Other',
+'Swift',
+'Redux',
+'MongoDB',
+'Other'
     ],
-    region: 'MEXICO',
-    publishedAt: '2025-06-22T06:51:46.572Z'
+    region: 'CANADA',
+    publishedAt: '2025-06-22T06:51:46.572Z',
+    sponsorName: 'Hey Solana'
   },
 {
     id: 'd70976a9-554a-4e29-9769-5016376e2509',
@@ -1350,11 +1399,11 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'SolidJS',
-'Android'
+'Writing'
     ],
-    region: 'SPAIN',
-    publishedAt: '2025-06-24T10:00:25.000Z'
+    region: 'POLAND',
+    publishedAt: '2025-06-22T10:00:25.000Z',
+    sponsorName: 'Neon EVM'
   },
 {
     id: '49135b77-4c1d-4944-a737-129efd7b9d2d',
@@ -1372,12 +1421,11 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'React Native',
-'Haskell',
-'Postgres'
+'Other'
     ],
-    region: 'USA',
-    publishedAt: '2025-06-23T12:02:56.000Z'
+    region: 'BRAZIL',
+    publishedAt: '2025-06-25T12:02:56.000Z',
+    sponsorName: 'MetaDAO'
   },
 {
     id: '59769d59-1e58-4965-92e2-bfa034a22680',
@@ -1395,14 +1443,16 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'C',
-'Erlang',
-'ASP.NET',
-'Ruby',
-'Flutter'
+'Graphic Design',
+'Deno',
+'Other',
+'Digital Marketing',
+'Other',
+'Ruby'
     ],
-    region: 'UKRAINE',
-    publishedAt: '2025-06-24T18:10:55.505Z'
+    region: 'GERMANY',
+    publishedAt: '2025-06-23T18:10:55.505Z',
+    sponsorName: 'Magic Eden'
   },
 {
     id: 'beb3d206-8733-4a66-b8ea-ad0e327af752',
@@ -1420,10 +1470,14 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Video'
+'Writing',
+'Research',
+'Rust',
+'Solidity'
     ],
-    region: 'ARGENTINA',
-    publishedAt: '2025-06-24T20:36:49.984Z'
+    region: 'IRELAND',
+    publishedAt: '2025-06-23T20:36:49.984Z',
+    sponsorName: 'Owners Club '
   },
 {
     id: '8701c9bb-29af-4a0e-8734-48134f76e222',
@@ -1441,10 +1495,15 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: 2500,
     status: 'OPEN',
     skills: [
-'Other'
+'Swift',
+'Svelte',
+'Laravel',
+'Other',
+'Django'
     ],
-    region: 'POLAND',
-    publishedAt: '2025-06-25T23:05:27.741Z'
+    region: 'GERMANY',
+    publishedAt: '2025-06-23T23:05:27.741Z',
+    sponsorName: 'Cryptowood'
   },
 {
     id: 'de1c0adb-9de5-467e-86e2-69f5f9c94197',
@@ -1462,12 +1521,11 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Solidity',
-'C++',
-'Scala'
+'C++'
     ],
-    region: 'IRELAND',
-    publishedAt: '2025-06-26T00:00:45.000Z'
+    region: 'VIETNAM',
+    publishedAt: '2025-06-25T00:00:45.000Z',
+    sponsorName: 'LastMint'
   },
 {
     id: 'bf7fefa0-b5c3-4cfe-bb51-2c776877b0a3',
@@ -1485,14 +1543,12 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'ASP.NET',
-'React Native',
-'Graphic Design',
-'Rust',
-'Ruby'
+'C',
+'Laravel'
     ],
-    region: 'GERMANY',
-    publishedAt: '2025-06-26T12:48:58.000Z'
+    region: 'UK',
+    publishedAt: '2025-06-25T12:48:58.000Z',
+    sponsorName: 'BukProtocol'
   },
 {
     id: '65cfca17-c12a-4098-88d1-4de26dc29af4',
@@ -1510,11 +1566,11 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Flutter',
-'Graphic Design'
+'Svelte'
     ],
-    region: 'KOREA',
-    publishedAt: '2025-06-26T16:59:48.000Z'
+    region: 'BALKAN',
+    publishedAt: '2025-06-25T16:59:48.000Z',
+    sponsorName: 'Superteam Vietnam'
   },
 {
     id: '3ed088f2-e555-408e-bb6e-b776ea12e4e9',
@@ -1532,10 +1588,15 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Flutter'
+'Other',
+'Graphic Design',
+'Django',
+'Video',
+'SolidJS'
     ],
-    region: 'ISRAEL',
-    publishedAt: '2025-06-29T17:59:43.000Z'
+    region: 'GERMANY',
+    publishedAt: '2025-06-29T17:59:43.000Z',
+    sponsorName: 'Superteam Vietnam'
   },
 {
     id: '9f9cc5be-832c-43fe-ba1f-cd76ceb9d827',
@@ -1553,15 +1614,16 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Python',
-'Graphic Design',
-'React',
-'Go',
-'Ruby',
-'Typescript'
+'Other',
+'SolidJS',
+'C',
+'Game Design',
+'Scala',
+'Illustration'
     ],
-    region: 'UAE',
-    publishedAt: '2025-06-30T07:29:15.000Z'
+    region: 'UKRAINE',
+    publishedAt: '2025-06-28T07:29:15.000Z',
+    sponsorName: 'Superteam Nepal'
   },
 {
     id: '0817a1b9-73dc-4f53-aa3d-a7d68c688d95',
@@ -1579,15 +1641,11 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Writing',
-'Other',
-'Game Design',
-'Scala',
-'Elm',
-'Video'
+'Redux'
     ],
-    region: 'FRANCE',
-    publishedAt: '2025-06-30T12:00:43.000Z'
+    region: 'TURKEY',
+    publishedAt: '2025-06-28T12:00:43.000Z',
+    sponsorName: 'Toby Network'
   },
 {
     id: 'df5c723e-ad60-440b-a70d-98d973aafd17',
@@ -1605,10 +1663,12 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Operations'
+'Angular',
+'Video'
     ],
-    region: 'UAE',
-    publishedAt: '2025-06-29T15:59:46.000Z'
+    region: 'BRAZIL',
+    publishedAt: '2025-06-29T15:59:46.000Z',
+    sponsorName: 'SecondSwap'
   },
 {
     id: '80e34ab3-58be-4196-93db-c998c6f2d9cc',
@@ -1626,14 +1686,13 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Laravel',
-'Game Design',
-'Ruby',
-'Video Editing',
-'Java'
+'Erlang',
+'Swift',
+'React Native'
     ],
-    region: 'TURKEY',
-    publishedAt: '2025-07-01T00:48:55.000Z'
+    region: 'UK',
+    publishedAt: '2025-07-02T00:48:55.000Z',
+    sponsorName: 'Superteam Vietnam'
   },
 {
     id: 'd971600a-a57c-4c61-91ac-2aa5986ae3f0',
@@ -1651,11 +1710,12 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Javascript',
-'Social Media'
+'Scala',
+'Operations'
     ],
-    region: 'BALKAN',
-    publishedAt: '2025-07-06T08:38:57.000Z'
+    region: 'INDIA',
+    publishedAt: '2025-07-04T08:38:57.000Z',
+    sponsorName: 'loofta'
   },
 {
     id: '3b622a31-d4bc-4b62-92be-9415fa8846fa',
@@ -1673,11 +1733,13 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Elixir',
-'Discord Moderator'
+'Discord Moderator',
+'Data Analytics',
+'Flutter'
     ],
-    region: 'SPAIN',
-    publishedAt: '2025-07-14T20:34:55.000Z'
+    region: 'GLOBAL',
+    publishedAt: '2025-07-14T20:34:55.000Z',
+    sponsorName: 'Xandeum Labs'
   },
 {
     id: 'f48af639-74a0-4908-b32c-bb4641ce6e60',
@@ -1695,15 +1757,16 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: 400,
     status: 'OPEN',
     skills: [
-'MySQL',
-'Django',
-'Graphic Design',
-'PHP',
-'Presentation Design',
-'Data Analytics'
+'Go',
+'Product Feedback',
+'Node.js',
+'Ruby on Rails',
+'Other',
+'Photography'
     ],
-    region: 'MALAYSIA',
-    publishedAt: '2025-07-29T09:26:27.000Z'
+    region: 'KOREA',
+    publishedAt: '2025-07-29T09:26:27.000Z',
+    sponsorName: 'Nomadz_co'
   },
 {
     id: 'c2b21caa-2b17-4b02-8312-9ec1e07ade34',
@@ -1721,12 +1784,15 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'PHP',
-'Social Media',
-'Kotlin'
+'Writing',
+'Flutter',
+'Other',
+'Move',
+'Other'
     ],
-    region: 'JAPAN',
-    publishedAt: '2025-08-31T00:52:45.000Z'
+    region: 'INDIA',
+    publishedAt: '2025-08-31T00:52:45.000Z',
+    sponsorName: 'Upshot'
   },
 {
     id: '13f196f6-ed79-4fb1-b850-da2eb40983be',
@@ -1744,13 +1810,15 @@ const NEW_LISTING: Notification[] = [
     maxRewardAsk: null,
     status: 'OPEN',
     skills: [
-'Business Development',
-'Javascript',
-'Operations',
-'Angular'
+'Research',
+'Other',
+'Laravel',
+'Redux',
+'Photography'
     ],
-    region: 'KOREA',
-    publishedAt: '2025-12-31T16:59:37.000Z'
+    region: 'CANADA',
+    publishedAt: '2025-12-30T16:59:37.000Z',
+    sponsorName: 'AIxBlock'
   }
 ];
 
@@ -1800,7 +1868,7 @@ export async function main() {
   console.log("\n--- Generated Notifications (Raw Objects) ---");
 
   try {
-    const notificationsList: Notification[] = await generateNotifications(userSessionData);
+    const notificationsList: NotificationData[] = await generateNotifications(userSessionData);
 
     if (notificationsList.length > 0) {
       notificationsList.forEach((notification, index) => {
@@ -1886,7 +1954,7 @@ async function testNotyByChatId() {
 }
 
 
-export async function generateNotifications(sessionData: SessionData): Promise<Notification[]> {
+export async function generateNotifications(sessionData: SessionData): Promise<NotificationData[]> {
   try {
     // Get current time and 12 hours ago threshold
     // Using a fixed time for demonstration based on the provided current time (Monday, June 16, 2025 at 2:18:52 AM +07)
@@ -1921,7 +1989,7 @@ export async function generateNotifications(sessionData: SessionData): Promise<N
   }
 }
 
-export async function generateNotificationsByChatId(chat_id: string): Promise<Notification[]> {
+export async function generateNotificationsByChatId(chat_id: string): Promise<NotificationData[]> {
   try {
     // 1. Lấy tất cả session data cho chat_id được cung cấp
     const sessions = await getSessionsByChatId(chat_id);
@@ -1933,7 +2001,44 @@ export async function generateNotificationsByChatId(chat_id: string): Promise<No
     }
 
     // 3. Duyệt qua từng session và tạo thông báo
-    let allNotifications: Notification[] = [];
+    let allNotifications: NotificationData[] = [];
+    for (const session of sessions) {
+      // Đảm bảo session.isEnableNoti là true trước khi tạo thông báo
+      if (session.isEnableNoti) {
+        try {
+          const notificationsForSession = await generateNotifications(session);
+          allNotifications = allNotifications.concat(notificationsForSession);
+        } catch (notificationError) {
+          console.error(`Lỗi khi tạo thông báo cho session của chat_id '${chat_id}':`, notificationError);
+          // Tiếp tục với các session khác nếu có lỗi
+        }
+      } else {
+        console.log(`Session cho chat_id '${chat_id}' không bật thông báo (isEnableNoti = false).`);
+      }
+    }
+
+    // Trả về tất cả các thông báo đã tạo
+    return allNotifications;
+  } catch (error: any) {
+    console.error(`Lỗi tổng quát khi tạo thông báo cho chat_id '${chat_id}':`, error);
+    // Ném lỗi để xử lý ở tầng cao hơn
+    throw new Error(`Không thể tạo thông báo cho chat_id '${chat_id}': ${error.message}`);
+  }
+}
+
+export async function getNewstForMe(chat_id: string): Promise<NotificationData[]> {
+  try {
+    // 1. Lấy tất cả session data cho chat_id được cung cấp
+    const sessions = await getSessionsByChatId(chat_id);
+
+    // 2. Nếu không tìm thấy session nào, trả về mảng rỗng
+    if (sessions.length === 0) {
+      console.log(`Không tìm thấy session nào cho chat_id '${chat_id}'.`);
+      return [];
+    }
+
+    // 3. Duyệt qua từng session và tạo thông báo
+    let allNotifications: NotificationData[] = [];
     for (const session of sessions) {
       // Đảm bảo session.isEnableNoti là true trước khi tạo thông báo
       if (session.isEnableNoti) {
