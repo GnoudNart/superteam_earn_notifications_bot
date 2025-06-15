@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User CRUD with Database</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 800px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        h1, h2 { text-align: center; }
+        form div { margin-bottom: 10px; }
+        label { display: inline-block; width: 100px; }
+        input[type="text"], input[type="email"], input[type="number"] { width: calc(100% - 110px); padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .actions button { margin-right: 5px; }
+        .edit-button { background-color: #28a745; }
+        .edit-button:hover { background-color: #218838; }
+        .delete-button { background-color: #dc3545; }
+        .delete-button:hover { background-color: #c82333; }
+        .message { margin-top: 15px; padding: 10px; border-radius: 4px; }
+        .message.success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .message.error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>User Management with Database</h1>
+    <div id="messageContainer" class="message"></div>
+
+    <h2>Add New User</h2>
+    <form id="userForm">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+        </div>
+        <div>
+            <label for="telegramId">Telegram ID:</label>
+            <input type="number" id="telegramId" required>
+        </div>
+        <div>
+            <label for="chatId">Chat ID:</label>
+            <input type="number" id="chatId" required>
+        </div>
+        <button type="submit" id="submitButton">Add User</button>
+    </form>
+
+    <h2>Current Users</h2>
+    <table id="userTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Telegram ID</th>
+            <th>Chat ID</th> <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    let currentEditId = null;
+    const messageContainer = document.getElementById('messageContainer');
+
+    function showMessage(msg, type = 'success') {
+        messageContainer.textContent = msg;
+        messageContainer.className = `message ${type}`;
+        messageContainer.style.display = 'block';
+        setTimeout(() => {
+            messageContainer.style.display = 'none';
+        }, 3000); // Hide after 3 seconds
+    }
+
+    // Function to fetch and render users from the database
+    async function fetchAndRenderUsers() {
+        try {
+            const response = await fetch('/api/users');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const users = await response.json();
+
+            const userTableBody = document.getElementById('userTable').getElementsByTagName('tbody')[0];
+            userTableBody.innerHTML = ''; // Clear existing rows
+
+            if (users.length === 0) {
+                const row = userTableBody.insertRow();
+                const cell = row.insertCell();
+                cell.colSpan = 6; // Updated colspan to include the new column
+                cell.textContent = 'No users found in the database.';
+                cell.style.textAlign = 'center';
+                return;
+            }
+
+            users.forEach(user => {
+                const row = userTableBody.insertRow();
+                row.insertCell().textContent = user.id;
+                row.insertCell().textContent = user.name;
+                row.insertCell().textContent = user.email;
+                row.insertCell().textContent = user.telegramId;
+                row.insertCell().textContent = user.chatId; // NEW CELL FOR CHAT ID
+
+                const actionsCell = row.insertCell();
+                actionsCell.className = 'actions';
+
+                const editButton = document.createElement('button');
+                editButton.textContent = 'Edit';
+                editButton.className = 'edit-button';
+                editButton.onclick = () => editUser(user.id, user.name, user.email, user.telegramId, user.chatId); // Pass chatId to editUser
+                actionsCell.appendChild(editButton);
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.className = 'delete-button';
+                deleteButton.onclick = () => deleteUser(user.id);
+                actionsCell.appendChild(deleteButton);
+            });
+        } catch (error) {
+            console.error('Error fetching users:', error);
+            showMessage('Failed to load users. Check console for details.', 'error');
+        }
+    }
+
+    // Function to add/update a user
+    document.getElementById('userForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const telegramId = document.getElementById('telegramId').value;
+        const chatId = document.getElementById('chatId').value; // NEW: Get chatId value
+
+        const userData = {
+            name,
+            email,
+            telegramId: parseInt(telegramId),
+            chatId: parseInt(chatId) // NEW: Include chatId in userData
+        };
+        let response;
+
+        try {
+            if (currentEditId !== null) {
+                // Update existing user
+                response = await fetch(`/api/users/${currentEditId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(userData)
+                });
+                if (response.ok) {
+                    showMessage('User updated successfully!');
+                } else {
+                    const errorData = await response.json();
+                    throw new Error(`Failed to update user: ${errorData.message || response.statusText}`);
+                }
+                currentEditId = null; // Reset edit mode
+                document.getElementById('submitButton').textContent = 'Add User';
+            } else {
+                // Add new user
+                response = await fetch('/api/users', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(userData)
+                });
+                if (response.ok) {
+                    showMessage('User added successfully!');
+                } else {
+                    const errorData = await response.json();
+                    throw new Error(`Failed to add user: ${errorData.message || response.statusText}`);
+                }
+            }
+        } catch (error) {
+            console.error('Error saving user:', error);
+            showMessage(`Error: ${error.message}`, 'error');
+        } finally {
+            this.reset(); // Clear form fields
+            await fetchAndRenderUsers(); // Re-fetch and re-render the table
+        }
+    });
+
+    // Function to populate form for editing
+    function editUser(id, name, email, telegramId, chatId) { // NEW: Add chatId parameter
+        document.getElementById('name').value = name;
+        document.getElementById('email').value = email;
+        document.getElementById('telegramId').value = telegramId;
+        document.getElementById('chatId').value = chatId; // NEW: Populate chatId field
+        currentEditId = id;
+        document.getElementById('submitButton').textContent = 'Update User';
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top to see the form
+    }
+
+    // Function to delete a user
+    async function deleteUser(id) {
+        if (!confirm('Are you sure you want to delete this user?')) {
+            return;
+        }
+        try {
+            const response = await fetch(`/api/users/${id}`, {
+                method: 'DELETE'
+            });
+            if (response.ok) {
+                showMessage('User deleted successfully!');
+            } else {
+                const errorData = await response.json();
+                throw new Error(`Failed to delete user: ${errorData.message || response.statusText}`);
+            }
+        } catch (error) {
+            console.error('Error deleting user:', error);
+            showMessage(`Error: ${error.message}`, 'error');
+        } finally {
+            await fetchAndRenderUsers(); // Re-fetch and re-render the table
+        }
+    }
+
+    // Initial render when the page loads
+    document.addEventListener('DOMContentLoaded', fetchAndRenderUsers);
+</script>
+</body>
+</html>
