@@ -6,23 +6,43 @@ import { editReplySkills } from './skills';
 
 const composer = new Composer<MyContext>();
 
+const wrapperMarkdown = (text: string): string => {
+    const mdChars = new Set(['_', '*', '[', ']', '(', ')', '~', '`', '>', '#', '+', '-', '=', '|', '{', '}', '.', '!']);
+    let result = '';
+    let i = 0;
+    while (i < text.length) {
+        const char = text[i];
+        if (mdChars.has(char)) {
+            if (i > 0 && text[i - 1] === '\\') {
+                result += char;
+            } else {
+                result += '\\' + char;
+            }
+        } else {
+            result += char;
+        }
+        i++;
+    }
+    return result;
+}
+
 const getSettingMessage = (ctx: MyContext) => {
     const session = ctx.session;
     let bountyType = (session.isBounties?"Bounties":"") + (session.isBounties && session.isProjects?" \\+ ":"") + (session.isProjects?"Projects":"")
     let isEnableNotification = session.isEnableNoti?"🔔":"🔕";
     let notiText = (!session.isEnableNoti?"🔔":"🔕") + " " + (session.isEnableNoti?"Turn off Notifications":"Turn on Notification");
     let message = 
-    `⚙️ Setup your notification preferences ⚙️                                          
+    `__*⚙️ Setup your notification preferences ⚙️*__                                          
 
-    *💵 USD Range*: ${session.minValue} \\- ${session.maxValue} 💲\\.
+    *💵 USD Range*: ${wrapperMarkdown(session.minValue.toString())} to ${wrapperMarkdown(session.maxValue.toString())} 💲\\.
 
-    *💰 Bounty Type*: ${bountyType}\\.
+    *💰 Bounty Type*: ${wrapperMarkdown(bountyType)}\\.
 
-    *🎯 Skills*: ${session.skills.join("\\, ").replace("++","\\+\\+")}\\.
+    *🎯 Skills*: ${wrapperMarkdown(session.skills.join(", "))}\\.
 
     *📧 Enable Notifications*: ${isEnableNotification}\\.
 
-    *🌐 Location*: ${session.location}\\.
+    *🌐 Location*: ${wrapperMarkdown(session.location)}\\.
     `
     const settingsInlineKeyboard = new InlineKeyboard()
     .text("💵 Set USD Range","settingsUSDValue")
@@ -47,6 +67,8 @@ export const replyEditSettings = (ctx: MyContext) => {
         ctx.editMessageText(message,{
             parse_mode: "MarkdownV2",
             reply_markup: settingsInlineKeyboard,
+        }).catch(e => {
+            replySettings(ctx);
         });
     } catch (err) {
         console.error("Some thing happend", err);
@@ -59,9 +81,12 @@ export const replySettings = (ctx: MyContext) => {
     let { message, settingsInlineKeyboard} = getSettingMessage(ctx);
     try {
         ctx.reply(message, {
-        parse_mode: "MarkdownV2",
-        reply_markup: settingsInlineKeyboard,
-    });
+            parse_mode: "MarkdownV2",
+            reply_markup: settingsInlineKeyboard,
+        }).catch(e => {
+            console.log(e);
+            replyStart(ctx);
+        });
     } catch (err) {
         console.error("Some thing happend", err);
         replyStart(ctx);
@@ -75,7 +100,7 @@ composer.command('settings', (ctx) => {
 
 // register callback_query
 composer.callbackQuery('settingsBack', ctx => { 
-    replyStart(ctx);
+    replyStart(ctx, true);
 });
 
 composer.callbackQuery('settingsBountyType', ctx => { 

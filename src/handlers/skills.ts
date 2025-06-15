@@ -1,7 +1,7 @@
 import { Composer, InlineKeyboard } from 'grammy';
 import { MyContext } from '../bot';
 import { allAvailableSkills } from '../interface/skills';
-import { replyEditSettings } from './settings';
+import { replyEditSettings, replySettings } from './settings';
 
 const composer = new Composer<MyContext>();
 
@@ -32,18 +32,40 @@ export const editReplySkills = (ctx: MyContext) => {
         let checkIcon = isMySkill?"✅":""
         return InlineKeyboard.text(checkIcon + skillName, "skills" + skillName);
     });
-    const skillsInlineKeyboard = InlineKeyboard.from([buttonRow]).toFlowed(5)
+
+    const numOptionsPerRow = 4;
+    const skillsInlineKeyboard = InlineKeyboard.from([buttonRow]).toFlowed(numOptionsPerRow)
+    .row()
+    .text("🚫 Clear all skills","skillsClear")
     .row()
     .text("⚙️ Back to settings","skillsBack");
-    ctx.editMessageText(messageString,{
-        parse_mode: "HTML",
-        reply_markup: skillsInlineKeyboard,
-    });
+
+    try {
+        ctx.editMessageText(messageString,{
+            parse_mode: "HTML",
+            reply_markup: skillsInlineKeyboard,
+        }).catch(e => {
+            console.log(e.description);
+            ctx.answerCallbackQuery(e.description).catch(e => console.log(e));
+        });
+    } catch (err) {
+        console.error("Some thing happend", err);
+        replySettings(ctx);
+    }
 }
 
 // register callback_query
 composer.callbackQuery('skillsBack', ctx => {
     replyEditSettings(ctx);
+});
+
+composer.callbackQuery('skillsClear', async ctx => {
+    ctx.session.skills = [];
+    try {
+        await ctx.answerCallbackQuery(`All Skills Removed`);
+        editReplySkills(ctx);
+    } catch (err) {
+    }
 });
 
 composer.on("callback_query:data").filter((ctx) => {

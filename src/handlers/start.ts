@@ -5,15 +5,15 @@ import { replyHelp } from './help';
 
 const composer = new Composer<MyContext>();
 
-export const replyStart = (ctx: MyContext) => {
+const getStartMessage = (ctx: MyContext) => {
     let userName = ctx.message?.from.username || "User";
-    let welcome = "Welcome, 🎉🍾 @userName 🎊🍻\n👋 You’ve joined @superteam_earn_notifications_bot – your all-in-one Superteam Earn Notifications assistant!".replace("@userName", userName);
+    let welcome = `Welcome, 🎉🍾 ${userName} 🎊🍻\n👋 You’ve joined @superteam_earn_notifications_bot – your all-in-one Superteam Earn Notifications assistant!`;
     if (!ctx.message?.from.username) {
         // join on command without message
-        welcome = "🎉🍾Welcome back🎊🍻\n👋 You’ve joined @superteam_earn_notifications_bot – your all-in-one Superteam Earn Notifications assistant!".replace("@userName", userName);
+        welcome = `🎉🍾Welcome back🎊🍻\n👋 You’ve joined @superteam_earn_notifications_bot – your all-in-one Superteam Earn Notifications assistant!`;
     }
-    let firstTimeMessage = "Looks like this is your first visit with us, please go to /settings to set up notifications that suit your needs ^_^";
-    let content = "Some basic commands:\n/newest - Show some newest bounties campain\n/forme Show some bounties that fit your preference\n/settings - Setup your preference\n/help - Show help"
+    let firstTimeMessage = "<blockquote>Looks like this is your first visit with us, please go to /settings to set up notifications that suit your needs 😄😄😄</blockquote>";
+    let content = "<blockquote>Some basic commands:\n/newest - Show some newest bounties campain\n/forme Show some bounties that fit your preference\n/start - Start bot at homepage\n/settings - Setup your preference\n/help - Show help</blockquote>"
     let message = welcome + "\n\n" + (ctx.session.hasSet?"":firstTimeMessage + "\n\n") + content;
     const startInlineKeyboard = new InlineKeyboard()
     .text("🆕 Newest Campaigns","startNewestCampaign")
@@ -24,9 +24,35 @@ export const replyStart = (ctx: MyContext) => {
     .row()
     .text("⚙️ Settings","startSettings").text("⁉️ Help","startHelp");
 
-    ctx.reply(message, {
-        reply_markup: startInlineKeyboard,
-    });
+    return {
+        message:message,
+        startInlineKeyboard: startInlineKeyboard
+    };
+}
+
+export const replyStart = (ctx: MyContext, isEdit: boolean = false) => {
+    let { message, startInlineKeyboard} = getStartMessage(ctx);
+
+    try {
+        if (isEdit) {
+            ctx.editMessageText(message, {
+                parse_mode: "HTML",
+                reply_markup: startInlineKeyboard,
+            }).catch(e => {
+                console.log(e)
+                replyStart(ctx);
+            });
+        } else {
+            ctx.reply(message, {
+                parse_mode: "HTML",
+                reply_markup: startInlineKeyboard,
+            }).catch(e => {
+                console.log(e)
+            });
+        }
+    } catch (err) {
+
+    }
 }
 
 // register command
@@ -44,7 +70,7 @@ composer.callbackQuery('startCampaigns', ctx => {
 });
 
 composer.callbackQuery('startSavedCampaigns', ctx => { 
-    ctx.answerCallbackQuery("Comming Soon");
+    ctx.answerCallbackQuery("Show user's saved campaigns, Comming Soon :D");
 });
 
 composer.callbackQuery('startSettings', ctx => { 
