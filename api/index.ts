@@ -78,5 +78,81 @@ app.get('/check-db-connection', async (req, res) => {
 //   await prisma.$disconnect();
 // });
 
+app.get('/crud_fake_user_for_test', (req, res) => {
+  // implement ui for crud user
+  res.sendFile(path.join(__dirname, '..', 'components', 'crud_fake_user_for_test.htm'));
+});
+
+
+app.get('/api/users', async (req, res) => {
+    try {
+        const users = await prisma.user.findMany(); // Giả sử bạn có model 'User' trong Prisma schema của mình
+        res.status(200).json(users);
+    } catch (error) {
+        console.error('Error fetching users:', error);
+        res.status(500).json({ status: 'error', message: 'Failed to fetch users from database.' });
+    }
+});
+
+// Thêm các API endpoint cho CRUD operations (sẽ cần cho bước sau)
+// POST: Tạo người dùng mới
+app.post('/api/users', async (req, res) => {
+    try {
+        const { name, email, telegramId } = req.body;
+        if (!name || !email || !telegramId) {
+            return res.status(400).json({ message: 'Name, email, and telegramId are required.' });
+        }
+        const newUser = await prisma.user.create({
+            data: {
+                name,
+                email,
+                telegramId: parseInt(telegramId) // Đảm bảo telegramId là số nguyên
+            },
+        });
+        res.status(201).json(newUser);
+    } catch (error) {
+        console.error('Error creating user:', error);
+        res.status(500).json({ status: 'error', message: 'Failed to create user.' });
+    }
+});
+
+// PUT: Cập nhật người dùng hiện có
+app.put('/api/users/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { name, email, telegramId } = req.body;
+        if (!name || !email || !telegramId) {
+            return res.status(400).json({ message: 'Name, email, and telegramId are required.' });
+        }
+        const updatedUser = await prisma.user.update({
+            where: { id: parseInt(id) }, // Đảm bảo id là số nguyên
+            data: {
+                name,
+                email,
+                telegramId: parseInt(telegramId)
+            },
+        });
+        res.status(200).json(updatedUser);
+    } catch (error) {
+        console.error(`Error updating user ${id}:`, error);
+        res.status(500).json({ status: 'error', message: `Failed to update user ${id}.` });
+    }
+});
+
+// DELETE: Xóa người dùng
+app.delete('/api/users/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        await prisma.user.delete({
+            where: { id: parseInt(id) }, // Đảm bảo id là số nguyên
+        });
+        res.status(204).send(); // 204 No Content for successful deletion
+    } catch (error) {
+        console.error(`Error deleting user ${id}:`, error);
+        res.status(500).json({ status: 'error', message: `Failed to delete user ${id}.` });
+    }
+});
+
+
 
 module.exports = app;
