@@ -1,10 +1,11 @@
-require('dotenv').config();
+import 'dotenv/config'; // Modern way to load dotenv in ES modules
 
-const express = require('express');
+import express from 'express';
+import bodyParser from 'body-parser';
+import path from 'path';
+import { webhookHandler } from '../src/bot.ts'; // Note the .js extension for local imports
+
 const app = express();
-const bodyParser = require('body-parser');
-const path = require('path');
-const { webhookHandler } = require('../src/bot');
 
 // Create application/x-www-form-urlencoded parser
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -16,7 +17,6 @@ app.get('/', (req, res) => {
   // Send a simple success message as a response
   res.status(200).send('Server test thành công! Chào mừng bạn đến với API.');
 });
-
 
 // Handle webhook updates from Telegram
 app.post('/webhook', webhookHandler);
@@ -43,6 +43,4 @@ app.get('/test', (req, res) => {
   });
 });
 
-
-
-module.exports = app;
+export default app; // Export using default export
