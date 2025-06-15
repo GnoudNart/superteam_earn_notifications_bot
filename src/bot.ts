@@ -118,4 +118,4 @@ bot.start()
 
 import { main } from './database'
 // export const webhookHandler = webhookCallback(bot, 'express')
-main()
+// main()

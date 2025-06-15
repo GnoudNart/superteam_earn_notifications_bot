@@ -23,7 +23,7 @@ export interface SessionData {
 
 
 
-export interface Notification {
+export interface NotificationData {
   id: string;
   rewardAmount: number | null;
   deadline: string;
@@ -41,4 +41,5 @@ export interface Notification {
   skills: string[];
   region: string;
   publishedAt: string;
+  sponsorName: string;
 }
