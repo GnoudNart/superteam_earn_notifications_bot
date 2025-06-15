@@ -20,3 +20,23 @@ export interface SessionData {
   hasSet: boolean;
   isEnableNoti: boolean;
 }
+
+interface Notification {
+  id: string;
+  rewardAmount: number;
+  deadline: string;
+  type: string;
+  title: string;
+  token: string;
+  winnersAnnouncedAt: string | null;
+  slug: string;
+  isWinnersAnnounced: boolean;
+  isFeatured: boolean;
+  compensationType: string;
+  minRewardAsk: number | null;
+  maxRewardAsk: number | null;
+  status: string;
+  skills: string[];
+  region: string;
+  publishedAt: string;
+}
