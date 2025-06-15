@@ -3,28 +3,9 @@ import { MyContext } from '../bot';
 import { replyStart } from './start';
 import { editReplyBountyType } from './bounty';
 import { editReplySkills } from './skills';
+import { wrapperMarkdown } from '../utils';
 
 const composer = new Composer<MyContext>();
-
-const wrapperMarkdown = (text: string): string => {
-    const mdChars = new Set(['_', '*', '[', ']', '(', ')', '~', '`', '>', '#', '+', '-', '=', '|', '{', '}', '.', '!']);
-    let result = '';
-    let i = 0;
-    while (i < text.length) {
-        const char = text[i];
-        if (mdChars.has(char)) {
-            if (i > 0 && text[i - 1] === '\\') {
-                result += char;
-            } else {
-                result += '\\' + char;
-            }
-        } else {
-            result += char;
-        }
-        i++;
-    }
-    return result;
-}
 
 const getSettingMessage = (ctx: MyContext) => {
     const session = ctx.session;
