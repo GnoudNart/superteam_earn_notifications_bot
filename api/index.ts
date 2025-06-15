@@ -5,6 +5,8 @@ const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
 import { webhookHandler } from '../src/bot';
+import { getUserIdsFromDatabase } from '../src/database'; // Giả sử bạn có hàm này để lấy user IDs
+
 
 // Create application/x-www-form-urlencoded parser
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -48,6 +50,34 @@ app.get('/test', (req, res) => {
   });
 });
 
+app.get('/manual-send-notifications', async (req, res) => {
+  try {
+    console.log('Manual cron job for sending notifications triggered!');
+
+    const userIds = await getUserIdsFromDatabase(); // Lấy user IDs từ database
+
+    if (userIds.length === 0) {
+      console.log('No users to send notifications to.');
+      return res.status(200).send('No users found to send notifications to.');
+    }
+
+    for (const userId of userIds) {
+      try {
+        await bot.api.sendMessage(userId, 'Đây là thông báo định kỳ của bạn từ bot (manual test)!'); //
+        console.log(`Notification sent to user: ${userId}`);
+      } catch (error) {
+        console.error(`Failed to send message to user ${userId}:`, error);
+        // Xử lý lỗi cụ thể, ví dụ: xóa người dùng nếu bot bị chặn
+      }
+    }
+
+    console.log('Manual cron job for sending notifications finished.');
+    res.status(200).send('Notifications sent successfully (manual test)!');
+  } catch (error) {
+    console.error('Error in manual cron job:', error);
+    res.status(500).send('Error sending notifications (manual test).');
+  }
+});
 
 
 module.exports = app;
