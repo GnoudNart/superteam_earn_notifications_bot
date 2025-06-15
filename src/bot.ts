@@ -8,8 +8,38 @@ import * as dotenv from 'dotenv';
 // Load environment variables from .env file
 dotenv.config();
 
-// Initialize the bot with the token from .env
-const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN!);
+
+const socksAgent = new SocksProxyAgent(process.env.PROXY_HOST!);
+
+// Define the SessionData structure. 
+interface SessionData {
+    activeMessageId: number;
+    minValue: number;
+    maxValue: number;
+    isBounties: boolean;
+    isProjects: boolean;
+    skills: string[];
+    location: string;
+    hasSet: boolean;
+    isEnableNoti: boolean;
+}
+
+
+export type MyContext = Context & SessionFlavor<SessionData> & ConversationFlavor<Context>;
+
+let botConfig = {};
+if (process.env.USE_PROXY) {
+    botConfig = {
+        client: {
+            baseFetchConfig: {
+                agent: socksAgent,
+                compress: true,
+            },
+        },
+    }
+}
+
+export const bot = new Bot<MyContext>(process.env.TELEGRAM_BOT_TOKEN!, botConfig);
 
 // Handle /start command
 bot.start((ctx) => {
@@ -28,7 +58,4 @@ bot.help((ctx) => {
 //     .catch((err) => console.error("Failed to launch bot:", err));
 //
 
-module.exports = {
-  bot,
-  webhookHandler: webhookCallback(bot),
-};
+export const webhookHandler = webhookCallback(bot);
