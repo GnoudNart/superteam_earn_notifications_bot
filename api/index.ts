@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
-// const { bot, webhookHandler } = require('../src/bot');
+const { webhookHandler } = require('../src/bot');
 
 // Create application/x-www-form-urlencoded parser
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 
 // Handle webhook updates from Telegram
-// app.post('/webhook', webhookHandler);
+app.post('/webhook', webhookHandler);
 
 app.get('/test', (req, res) => {
   // Log the received JSON body to the console.
