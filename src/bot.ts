@@ -58,4 +58,4 @@ bot.help((ctx) => {
 //     .catch((err) => console.error("Failed to launch bot:", err));
 //
 
-export const webhookHandler = webhookCallback(bot, 'express'))
+export const webhookHandler = webhookCallback(bot, 'express')
