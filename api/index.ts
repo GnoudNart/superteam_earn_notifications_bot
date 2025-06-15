@@ -300,10 +300,8 @@ app.delete('/api/sessions/:id', async (req, res) => {
 });
 
 
-app.get('/api/getFilteredSessionsMap', async (req, res) => {
+app.get('/getFilteredSessionsMap', async (req, res) => {
     try {
-        // Assuming getFilteredSessions accepts query parameters like 'key' or 'value'
-        const { key, value } = req.query;
 
         // Call the exported getFilteredSessions function
         const filteredSessionsMap = await getFilteredSessionsMap();
