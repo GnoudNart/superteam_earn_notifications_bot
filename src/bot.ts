@@ -33,14 +33,19 @@ interface SessionData {
 
 export type MyContext = Context & SessionFlavor<SessionData> & ConversationFlavor<Context>;
 
-const bot = new Bot<MyContext>(process.env.TELEGRAM_BOT_TOKEN!, {
-    client: {
-        baseFetchConfig: {
-            agent: socksAgent,
-            compress: true,
+let botConfig = {};
+if (process.env.USE_PROXY) {
+    botConfig = {
+        client: {
+            baseFetchConfig: {
+                agent: socksAgent,
+                compress: true,
+            },
         },
-    },
-});
+    }
+}
+
+const bot = new Bot<MyContext>(process.env.TELEGRAM_BOT_TOKEN!, botConfig);
 
 // Creates a new object that will be used as initial SessionData data.
 function createInitialSessionData() {
