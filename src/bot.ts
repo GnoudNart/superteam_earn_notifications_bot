@@ -1,4 +1,8 @@
-import { Telegraf } from 'telegraf';
+import { Bot, Context, GrammyError, HttpError, session, SessionFlavor, webhookCallback } from "grammy";
+import {
+    type ConversationFlavor,
+    conversations,
+} from "@grammyjs/conversations";
 import * as dotenv from 'dotenv';
 
 // Load environment variables from .env file
@@ -17,11 +21,14 @@ bot.help((ctx) => {
   ctx.reply('This bot notifies you about new bounties and projects on Superteam Earn.');
 });
 
-// Launch the bot
-bot.launch()
-  .then(() => console.log('Bot is running...'))
-  .catch((err) => console.error('Failed to launch bot:', err));
+// Start the bot.
+// console.log("Starting the bot...")
+// bot.start()
+//     .then(() => console.log("Bot is running..."))
+//     .catch((err) => console.error("Failed to launch bot:", err));
+//
 
-// Enable graceful stop
-process.once('SIGINT', () => bot.stop('SIGINT'));
-process.once('SIGTERM', () => bot.stop('SIGTERM'));
+module.exports = {
+  bot,
+  webhookHandler: webhookCallback(bot),
+};
