@@ -200,5 +200,104 @@ app.delete('/api/users/:id', async (req, res) => {
 });
 
 
+app.get('/crud_session_management', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'components', 'crud_session_management.htm'));
+});
+
+// POST /api/sessions endpoint for creating a new session
+app.post('/api/sessions', async (req, res) => {
+    try {
+        const { key, value } = req.body;
+
+        if (!key || !value) {
+            return res.status(400).json({ message: 'Key and value are required.' });
+        }
+
+        const newSession = await prisma.session.create({
+            data: {
+                key,
+                value,
+            },
+        });
+        res.status(201).json(newSession);
+    } catch (error) {
+        console.error('Error creating session:', error);
+        if (error.code === 'P2002') {
+            return res.status(409).json({ status: 'error', message: 'Session key already exists.' });
+        }
+        res.status(500).json({ status: 'error', message: 'Failed to create session.' });
+    }
+});
+
+// GET /api/sessions endpoint for fetching all sessions
+app.get('/api/sessions', async (req, res) => {
+    try {
+        const sessions = await prisma.session.findMany();
+        res.status(200).json(sessions);
+    } catch (error) {
+        console.error('Error fetching sessions:', error);
+        res.status(500).json({ status: 'error', message: 'Failed to fetch sessions.' });
+    }
+});
+
+// GET /api/sessions/:id endpoint for fetching a single session by ID
+app.get('/api/sessions/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const session = await prisma.session.findUnique({
+            where: { id: parseInt(id) },
+        });
+
+        if (!session) {
+            return res.status(404).json({ message: 'Session not found.' });
+        }
+        res.status(200).json(session);
+    } catch (error) {
+        console.error(`Error fetching session ${id}:`, error);
+        res.status(500).json({ status: 'error', message: `Failed to fetch session ${id}.` });
+    }
+});
+
+// PUT /api/sessions/:id endpoint for updating an existing session
+app.put('/api/sessions/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { key, value } = req.body;
+
+        if (!key || !value) {
+            return res.status(400).json({ message: 'Key and value are required.' });
+        }
+
+        const updatedSession = await prisma.session.update({
+            where: { id: parseInt(id) },
+            data: {
+                key,
+                value,
+            },
+        });
+        res.status(200).json(updatedSession);
+    } catch (error) {
+        console.error(`Error updating session ${id}:`, error);
+        if (error.code === 'P2002') {
+            return res.status(409).json({ status: 'error', message: 'Session key already exists.' });
+        }
+        res.status(500).json({ status: 'error', message: `Failed to update session ${id}.` });
+    }
+});
+
+// DELETE /api/sessions/:id endpoint for deleting a session
+app.delete('/api/sessions/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        await prisma.session.delete({
+            where: { id: parseInt(id) },
+        });
+        res.status(204).send(); // 204 No Content for successful deletion
+    } catch (error) {
+        console.error(`Error deleting session ${id}:`, error);
+        res.status(500).json({ status: 'error', message: `Failed to delete session ${id}.` });
+    }
+});
+
 
 module.exports = app;
