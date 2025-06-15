@@ -24,9 +24,19 @@ This Telegram bot is designed to notify users of new opportunities listed on Sup
 
 ---
 
+## Demo link
+https://youtu.be/HaRlXzpV-UA
+
+---
+
+## Pull Request
+https://github.com/SuperteamDAO/earn/pull/1110
+
+---
+
 ## Technology Stack
 
-* **Programming Language:** TypeScript
+* **Programming Language:** TypeScript, grammY
 * **Runtime:** Node.js
 * **Package Manager:** pnpm
 * **Database:** Prisma (as indicated by `prisma` directory)
