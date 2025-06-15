@@ -5,13 +5,13 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL") // Biến môi trường chứa connection string của PostgreSQL
+  url      = env("DATABASE_URL")
 }
 
 model User {
-  id              String    @id @default(cuid()) // ID nội bộ của database
-  chatId          BigInt    @unique // Telegram Chat ID, dùng BigInt vì có thể lớn
-  isEnableNoti    Boolean   @default(true) // Cờ bật/tắt thông báo
+  id              String    @id @default(cuid())
+  chatId          BigInt    @unique
+  isEnableNoti    Boolean   @default(true)
   createdAt       DateTime  @default(now())
   updatedAt       DateTime  @updatedAt
 }
