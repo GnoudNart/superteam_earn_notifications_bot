@@ -1,6 +1,6 @@
 import { Composer, InlineKeyboard } from 'grammy';
 import { MyContext } from '../bot';
-import { replyEditSettings } from './settings';
+import { replyEditSettings, replySettings } from './settings';
 
 const composer = new Composer<MyContext>();
 
@@ -17,10 +17,18 @@ export const editReplyBountyType = (ctx: MyContext) => {
     const spaceLine = `\n${" ".repeat(100)}&#x200D;\n`;
     messageText = messageText + spaceLine;
     
-    ctx.editMessageText(messageText,{
-        parse_mode: "HTML",
-        reply_markup: setBountyTypeInlineKeyboard,
-    });
+    try {
+        ctx.editMessageText(messageText,{
+            parse_mode: "HTML",
+            reply_markup: setBountyTypeInlineKeyboard,
+        }).catch(e => {
+            console.log(e.description);
+            ctx.answerCallbackQuery(e.description).catch(e => console.log(e));
+        });
+    } catch (err) {
+        console.error("Some thing happend", err);
+        replySettings(ctx);
+    }
 }
 
 const updateAndReplyBountyType = async (ctx: MyContext, bountyType: string) => {
