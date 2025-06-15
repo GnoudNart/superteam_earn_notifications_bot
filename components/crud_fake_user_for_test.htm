@@ -45,6 +45,10 @@
             <label for="telegramId">Telegram ID:</label>
             <input type="number" id="telegramId" required>
         </div>
+        <div>
+            <label for="chatId">Chat ID:</label>
+            <input type="number" id="chatId" required>
+        </div>
         <button type="submit" id="submitButton">Add User</button>
     </form>
 
@@ -56,7 +60,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Telegram ID</th>
-            <th>Actions</th>
+            <th>Chat ID</th> <th>Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -92,7 +96,7 @@
             if (users.length === 0) {
                 const row = userTableBody.insertRow();
                 const cell = row.insertCell();
-                cell.colSpan = 5;
+                cell.colSpan = 6; // Updated colspan to include the new column
                 cell.textContent = 'No users found in the database.';
                 cell.style.textAlign = 'center';
                 return;
@@ -104,6 +108,7 @@
                 row.insertCell().textContent = user.name;
                 row.insertCell().textContent = user.email;
                 row.insertCell().textContent = user.telegramId;
+                row.insertCell().textContent = user.chatId; // NEW CELL FOR CHAT ID
 
                 const actionsCell = row.insertCell();
                 actionsCell.className = 'actions';
@@ -111,7 +116,7 @@
                 const editButton = document.createElement('button');
                 editButton.textContent = 'Edit';
                 editButton.className = 'edit-button';
-                editButton.onclick = () => editUser(user.id, user.name, user.email, user.telegramId);
+                editButton.onclick = () => editUser(user.id, user.name, user.email, user.telegramId, user.chatId); // Pass chatId to editUser
                 actionsCell.appendChild(editButton);
 
                 const deleteButton = document.createElement('button');
@@ -133,8 +138,14 @@
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const telegramId = document.getElementById('telegramId').value;
+        const chatId = document.getElementById('chatId').value; // NEW: Get chatId value
 
-        const userData = { name, email, telegramId: parseInt(telegramId) };
+        const userData = {
+            name,
+            email,
+            telegramId: parseInt(telegramId),
+            chatId: parseInt(chatId) // NEW: Include chatId in userData
+        };
         let response;
 
         try {
@@ -150,7 +161,8 @@
                 if (response.ok) {
                     showMessage('User updated successfully!');
                 } else {
-                    throw new Error(`Failed to update user: ${response.statusText}`);
+                    const errorData = await response.json();
+                    throw new Error(`Failed to update user: ${errorData.message || response.statusText}`);
                 }
                 currentEditId = null; // Reset edit mode
                 document.getElementById('submitButton').textContent = 'Add User';
@@ -166,7 +178,8 @@
                 if (response.ok) {
                     showMessage('User added successfully!');
                 } else {
-                    throw new Error(`Failed to add user: ${response.statusText}`);
+                    const errorData = await response.json();
+                    throw new Error(`Failed to add user: ${errorData.message || response.statusText}`);
                 }
             }
         } catch (error) {
@@ -179,10 +192,11 @@
     });
 
     // Function to populate form for editing
-    function editUser(id, name, email, telegramId) {
+    function editUser(id, name, email, telegramId, chatId) { // NEW: Add chatId parameter
         document.getElementById('name').value = name;
         document.getElementById('email').value = email;
         document.getElementById('telegramId').value = telegramId;
+        document.getElementById('chatId').value = chatId; // NEW: Populate chatId field
         currentEditId = id;
         document.getElementById('submitButton').textContent = 'Update User';
         window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top to see the form
@@ -200,7 +214,8 @@
             if (response.ok) {
                 showMessage('User deleted successfully!');
             } else {
-                throw new Error(`Failed to delete user: ${response.statusText}`);
+                const errorData = await response.json();
+                throw new Error(`Failed to delete user: ${errorData.message || response.statusText}`);
             }
         } catch (error) {
             console.error('Error deleting user:', error);
