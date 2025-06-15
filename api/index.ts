@@ -106,12 +106,16 @@ app.post('/api/users', async (req, res) => {
             data: {
                 name,
                 email,
-                telegramId: parseInt(telegramId) // Đảm bảo telegramId là số nguyên
+                telegramId: parseInt(telegramId)
             },
         });
         res.status(201).json(newUser);
     } catch (error) {
         console.error('Error creating user:', error);
+        // Xử lý lỗi unique constraint cụ thể
+        if (error.code === 'P2002') {
+            return res.status(409).json({ status: 'error', message: 'User with this email or Telegram ID already exists.' });
+        }
         res.status(500).json({ status: 'error', message: 'Failed to create user.' });
     }
 });
