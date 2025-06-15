@@ -8,5 +8,12 @@
       "path": "/api/sendNotifications",
       "schedule": "0 1 * * *"
     }
-  ]
+  ],
+  "builds": [
+    {
+      "src": "api/**/*.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "outputDirectory": "."
 }
