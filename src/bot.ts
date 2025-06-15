@@ -16,7 +16,7 @@ import help from "./handlers/help";
 import bounty from "./handlers/bounty";
 import skills from "./handlers/skills";
 import valueUSD from "./handlers/valueUSD";
-import { SessionData } from './types'
+import { SessionData } from './type'
 
 dotenv.config();
 
