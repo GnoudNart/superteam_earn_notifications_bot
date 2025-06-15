@@ -4,7 +4,7 @@ import { replySettings } from './settings';
 import { replyHelp } from './help';
 import { wrapperMarkdown } from '../utils';
 import { NotificationData } from '../type';
-import { getNewestCampaigns, getPreferenceNoti } from '../database';
+import { getNewestCampaigns, getPreferenceNoti, testRun } from '../database';
 
 const composer = new Composer<MyContext>();
 
@@ -63,7 +63,7 @@ const handleNewestCampaign = async (ctx: MyContext) => {
         return;
     let newCampaigns = await getNewestCampaigns();
     console.log("Data: ", newCampaigns.length);
-    sendNotifications(ctx,newCampaigns);
+    sendNotificationsMessage(ctx,newCampaigns);
 }
 
 const handleForMe = async (ctx: MyContext) => {
@@ -71,17 +71,16 @@ const handleForMe = async (ctx: MyContext) => {
         return;
     let filterCampaigns = await getPreferenceNoti(ctx);
     console.log("Data: ", filterCampaigns.length);
-    sendNotifications(ctx,filterCampaigns);
+    sendNotificationsMessage(ctx,filterCampaigns);
 }
 
-const sendNotifications = (ctx: MyContext, notificationsData: NotificationData[]) => {
+const sendNotificationsMessage = (ctx: MyContext, notificationsData: NotificationData[]) => {
     for (let notificationData of notificationsData) {
         sendNotification(ctx,notificationData)
     }
 }
 
-const sendNotification = (ctx: MyContext, notificationData: NotificationData) => {
-    let title = `New ${notificationData.type.toUpperCase()}: ${notificationData.title}`;
+export const getNotificationMessage = (notificationData: NotificationData) => {
     let rewardToken = (notificationData.rewardAmount?notificationData.rewardAmount:"") + " " + notificationData.token;
     let usdValue = "";
     if (notificationData.compensationType === "variable") {
@@ -96,7 +95,6 @@ const sendNotification = (ctx: MyContext, notificationData: NotificationData) =>
     let url = "https://earn.superteam.fun/listing/" + notificationData.slug + "/?utm_source=telegrambot"
     let deadline = new Date(notificationData.deadline).toUTCString();
     let notificationMessage = 
-    
     `*⚡️                                        ⭐️${wrapperMarkdown(` New ${notificationData.type.toUpperCase()}`)}⭐️                                        ⚡️*
     __*🔥 ${wrapperMarkdown(notificationData.title)} 🔥*__                                          
 
@@ -107,6 +105,11 @@ const sendNotification = (ctx: MyContext, notificationData: NotificationData) =>
     *⏰ Deadline*: ${wrapperMarkdown(deadline)}\\.
     [Apply Now](${url})
     `
+    return notificationMessage;
+}
+
+const sendNotification = (ctx: MyContext, notificationData: NotificationData) => {
+    let notificationMessage = getNotificationMessage(notificationData);
     try {
         ctx.reply(notificationMessage,{
             parse_mode: "MarkdownV2",
@@ -152,6 +155,10 @@ composer.command('newest', (ctx) => {
 
 composer.command('forme', (ctx) => {
     handleForMe(ctx);
+});
+
+composer.command('testNoti', (ctx) => {
+    testRun();
 });
 
 // register callback Query

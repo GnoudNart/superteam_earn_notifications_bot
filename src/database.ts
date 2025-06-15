@@ -2,7 +2,8 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 import { User, SessionData, NotificationData } from './type'
-import { MyContext } from './bot';
+import { bot, MyContext } from './bot';
+import { getNotificationMessage } from './handlers/start';
 
 const list_skill = ['Frontend', 'Backend', 'Blockchain', 'Mobile', 'Design', 'Community', 'Growth', 'Content', 'Other', 'React', 'Svelte', 'Angular', 'Vue', 'SolidJS', 'Redux', 'Elm', 'Javascript', 'Typescript', 'Node.js', 'PHP', 'Laravel', 'Python', 'Django', 'Kotlin', 'Swift', 'Java', 'C++', 'C', 'Ruby', 'Ruby on Rails', 'Go', 'MySQL', 'Postgres', 'MongoDB', 'Pearl', 'Scala', 'Elixir', 'Haskell', 'Erlang', 'Deno', 'Dart', 'ASP.NET', 'Rust', 'Solidity', 'Move', 'Android', 'iOS', 'Flutter', 'React Native', 'UI/UX Design', 'Graphic Design', 'Illustration', 'Game Design', 'Presentation Design', 'Community Manager', 'Discord Moderator', 'Business Development', 'Digital Marketing', 'Marketing', 'Research', 'Photography', 'Video', 'Video Editing', 'Writing', 'Social Media', 'Data Analytics', 'Operations', 'Product Feedback', 'Product Manager']
 const NEW_LISTING: NotificationData[] = [
@@ -2038,8 +2039,7 @@ export async function getNotificationsDataBySessionData(session: SessionData): P
                               listing.skills.some((skill) => sessionData.skills.indexOf(skill) >= 0);
         const matchesLocation = listing.region.toUpperCase() === sessionData.location.toUpperCase() || listing.region.toUpperCase() === "GLOBAL";
         const matchesStatus = listing.status === 'OPEN';
-        return sessionData.isEnableNoti &&
-               matchesType &&
+        return matchesType &&
                matchesSkills &&
                matchesLocation &&
                matchesStatus;
@@ -2137,6 +2137,49 @@ export async function getSessionsByChatId(chat_id: string): Promise<SessionData[
   } catch (error) {
     console.error(`Lỗi khi lấy session từ cơ sở dữ liệu với chat_id ${chat_id}:`, error);
     throw error; // Ném lỗi để xử lý ở tầng cao hơn
+  }
+}
+
+export async function getNewNotifications(): Promise<NotificationData[]> {
+  const now = new Date();
+  const twelveHoursAgo = new Date(now.getTime() - 12 * 60 * 60 * 1000);
+    // Filter listings
+    const newListing = NEW_LISTING
+      .filter((listing) => {
+        let timePublish = new Date(listing.publishedAt);
+        return twelveHoursAgo <= timePublish && timePublish <= now; 
+      });
+  return newListing;
+}
+
+export async function testRun() {
+  try {
+    console.log('Cron job for sending notifications started!');
+
+    const userIds = await getUserIdsFromDatabase(); //
+
+    if (userIds.length === 0) {
+    }
+
+    let newNotis = await getNewNotifications();
+
+    // Logic gửi thông báo đến từng người dùng
+    for (const userId of userIds) {
+      try {
+        for (const noti of newNotis) {
+          let message = getNotificationMessage(noti)
+        await bot.api.sendMessage(userId, message, {
+          parse_mode: "MarkdownV2",
+        }).catch(e => {}); //
+        }
+        console.log(`Notification sent to user: ${userId}`);
+      } catch (error) {
+        console.error(`Failed to send message to user ${userId}:`, error);
+      }
+    }
+    console.log('Cron job for sending notifications finished.');
+  } catch (error) {
+    console.error('Error in cron job:', error);
   }
 }
 

@@ -9,13 +9,16 @@ const composer = new Composer<MyContext>();
 
 const getSettingMessage = (ctx: MyContext) => {
     const session = ctx.session;
+    let maxValue = session.maxValue;
+    if (!session.maxValue)
+        maxValue = Number(Infinity);
     let bountyType = (session.isBounties?"Bounties":"") + (session.isBounties && session.isProjects?" \\+ ":"") + (session.isProjects?"Projects":"")
     let isEnableNotification = session.isEnableNoti?"🔔":"🔕";
     let notiText = (!session.isEnableNoti?"🔔":"🔕") + " " + (session.isEnableNoti?"Turn off Notifications":"Turn on Notification");
     let message = 
     `__*⚙️ Setup your notification preferences ⚙️*__                                          
 
-    *💵 USD Range*: ${wrapperMarkdown(session.minValue.toString())} to ${wrapperMarkdown(session.maxValue.toString())} 💲\\.
+    *💵 USD Range*: ${wrapperMarkdown(session.minValue.toString())} to ${wrapperMarkdown(maxValue.toString())} 💲\\.
 
     *💰 Bounty Type*: ${wrapperMarkdown(bountyType)}\\.
 
