@@ -98,23 +98,24 @@ app.get('/api/users', async (req, res) => {
 // POST: Tạo người dùng mới
 app.post('/api/users', async (req, res) => {
     try {
-        const { name, email, telegramId } = req.body;
-        if (!name || !email || !telegramId) {
-            return res.status(400).json({ message: 'Name, email, and telegramId are required.' });
+        // Lấy thêm chatId từ body
+        const { name, email, telegramId, chatId } = req.body;
+        if (!name || !email || !telegramId || !chatId) { // Kiểm tra tất cả các trường bắt buộc
+            return res.status(400).json({ message: 'Name, email, telegramId, and chatId are required.' });
         }
         const newUser = await prisma.user.create({
             data: {
                 name,
                 email,
-                telegramId: parseInt(telegramId)
+                telegramId: parseInt(telegramId),
+                chatId: parseInt(chatId) // <-- Truyền chatId vào đây
             },
         });
         res.status(201).json(newUser);
     } catch (error) {
         console.error('Error creating user:', error);
-        // Xử lý lỗi unique constraint cụ thể
         if (error.code === 'P2002') {
-            return res.status(409).json({ status: 'error', message: 'User with this email or Telegram ID already exists.' });
+            return res.status(409).json({ status: 'error', message: 'Email, Telegram ID or Chat ID already exists.' });
         }
         res.status(500).json({ status: 'error', message: 'Failed to create user.' });
     }
