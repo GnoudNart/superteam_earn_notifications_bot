@@ -116,6 +116,6 @@ bot.start()
     .catch((err) => console.error("Failed to launch bot:", err));
 
 
-import { main } from './database'
+// import { main } from './database'
 // export const webhookHandler = webhookCallback(bot, 'express')
 // main()

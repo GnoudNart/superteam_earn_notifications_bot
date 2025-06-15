@@ -2,6 +2,7 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 import { User, SessionData, NotificationData } from './type'
+import { MyContext } from './bot';
 
 const list_skill = ['Frontend', 'Backend', 'Blockchain', 'Mobile', 'Design', 'Community', 'Growth', 'Content', 'Other', 'React', 'Svelte', 'Angular', 'Vue', 'SolidJS', 'Redux', 'Elm', 'Javascript', 'Typescript', 'Node.js', 'PHP', 'Laravel', 'Python', 'Django', 'Kotlin', 'Swift', 'Java', 'C++', 'C', 'Ruby', 'Ruby on Rails', 'Go', 'MySQL', 'Postgres', 'MongoDB', 'Pearl', 'Scala', 'Elixir', 'Haskell', 'Erlang', 'Deno', 'Dart', 'ASP.NET', 'Rust', 'Solidity', 'Move', 'Android', 'iOS', 'Flutter', 'React Native', 'UI/UX Design', 'Graphic Design', 'Illustration', 'Game Design', 'Presentation Design', 'Community Manager', 'Discord Moderator', 'Business Development', 'Digital Marketing', 'Marketing', 'Research', 'Photography', 'Video', 'Video Editing', 'Writing', 'Social Media', 'Data Analytics', 'Operations', 'Product Feedback', 'Product Manager']
 const NEW_LISTING: NotificationData[] = [
@@ -1000,7 +1001,7 @@ const NEW_LISTING: NotificationData[] = [
     skills: [
 'Other'
     ],
-    region: 'CANADA',
+    region: 'GLOBAL',
     publishedAt: '2025-06-14T11:00:49.557Z',
     sponsorName: 'Credible Finance'
   },
@@ -1125,7 +1126,7 @@ const NEW_LISTING: NotificationData[] = [
 'Business Development',
 'Other'
     ],
-    region: 'IRELAND',
+    region: 'GLOBAL',
     publishedAt: '2025-06-16T14:46:23.530Z',
     sponsorName: 'Blue7'
   },
@@ -1174,7 +1175,7 @@ const NEW_LISTING: NotificationData[] = [
 'Community Manager',
 'Product Manager'
     ],
-    region: 'CANADA',
+    region: 'GLOBAL',
     publishedAt: '2025-06-18T12:28:49.000Z',
     sponsorName: 'Solana Wallet Tracker'
   },
@@ -1201,7 +1202,7 @@ const NEW_LISTING: NotificationData[] = [
 'Python',
 'SolidJS'
     ],
-    region: 'INDIA',
+    region: 'GLOBAL',
     publishedAt: '2025-06-19T06:59:40.000Z',
     sponsorName: 'Global Dollar Network'
   },
@@ -1850,109 +1851,108 @@ export async function getUserIdsFromDatabase(): Promise<number[]> {
 
 
 // Example usage
-export async function main() {
- const userSessionData: SessionData = {
-    activeMessageId: 123,
-    minValue: 0,
-    maxValue: 10000,
-    isBounties: true,
-    isProjects: true,
-    skills: ['UI/UX Design', 'Solidity'], // User is interested in these skills
-    location: '', // User interested in all locations
-    hasSet: true,
-    isEnableNoti: true, // Notifications are enabled
-  };
+// export async function main() {
+//  const userSessionData: SessionData = {
+//     activeMessageId: 123,
+//     minValue: 0,
+//     maxValue: 10000,
+//     isBounties: true,
+//     isProjects: true,
+//     skills: ['UI/UX Design', 'Solidity'], // User is interested in these skills
+//     location: '', // User interested in all locations
+//     hasSet: true,
+//     isEnableNoti: true, // Notifications are enabled
+//   };
 
-  console.log("Generating notifications with the following session data:");
-  console.log(userSessionData);
-  console.log("\n--- Generated Notifications (Raw Objects) ---");
+//   console.log("Generating notifications with the following session data:");
+//   console.log(userSessionData);
+//   console.log("\n--- Generated Notifications (Raw Objects) ---");
 
-  try {
-    const notificationsList: NotificationData[] = await generateNotifications(userSessionData);
+//   try {
+//     const notificationsList: NotificationData[] = await generateNotifications(userSessionData);
 
-    if (notificationsList.length > 0) {
-      notificationsList.forEach((notification, index) => {
-        console.log(`\nNotification Object ${index + 1}:`);
-        console.log(notification); // This will now log the full Notification object
-      });
-    } else {
-      console.log("No new notifications match the criteria.");
-    }
+//     if (notificationsList.length > 0) {
+//       notificationsList.forEach((notification, index) => {
+//         console.log(`\nNotification Object ${index + 1}:`);
+//         console.log(notification); // This will now log the full Notification object
+//       });
+//     } else {
+//       console.log("No new notifications match the criteria.");
+//     }
 
-    testNotyByChatId()
-  } catch (error) {
-    console.error("Failed to generate notifications:", error);
-  }
-}
+//     testNotyByChatId()
+//   } catch (error) {
+//     console.error("Failed to generate notifications:", error);
+//   }
+// }
 
-async function testNotyByChatId() {
-  const testChatId = "13063656912"; // ID để test
+// async function testNotyByChatId() {
+//   const testChatId = "13063656912"; // ID để test
 
-  try {
-    // --- Chuẩn bị dữ liệu test ---
-    // Xóa session cũ nếu có để đảm bảo môi trường sạch
-    await prisma.session.deleteMany({
-      where: { key: testChatId }
-    });
-    console.log(`Đã xóa tất cả session có key '${testChatId}' (nếu có).`);
+//   try {
+//     // --- Chuẩn bị dữ liệu test ---
+//     // Xóa session cũ nếu có để đảm bảo môi trường sạch
+//     await prisma.session.deleteMany({
+//       where: { key: testChatId }
+//     });
+//     console.log(`Đã xóa tất cả session có key '${testChatId}' (nếu có).`);
 
-    // Tạo một session giả định để thử nghiệm
-    const createdSession = await prisma.session.create({
-      data: {
-        key: testChatId,
-        value: JSON.stringify({
-          hasSet: true,
-          isEnableNoti: true,
-          isProjects: true,
-          isBounties: true, // Kích hoạt cả project và bounty
-          skills: ['JavaScript', 'React', 'Python'], // Kỹ năng để khớp với NEW_LISTING
-          location: 'JAPAN' // Địa điểm
-        })
-      }
-    });
-    console.log(`Đã tạo session test với key '${createdSession.key}'.`);
+//     // Tạo một session giả định để thử nghiệm
+//     const createdSession = await prisma.session.create({
+//       data: {
+//         key: testChatId,
+//         value: JSON.stringify({
+//           hasSet: true,
+//           isEnableNoti: true,
+//           isProjects: true,
+//           isBounties: true, // Kích hoạt cả project và bounty
+//           skills: ['JavaScript', 'React', 'Python'], // Kỹ năng để khớp với NEW_LISTING
+//           location: 'JAPAN' // Địa điểm
+//         })
+//       }
+//     });
+//     console.log(`Đã tạo session test với key '${createdSession.key}'.`);
 
-    // --- Thực thi hàm cần test -generateNotificationsByChatId--
-    console.log(`\nĐang tạo thông báo cho chat_id: '${testChatId}'...`);
-    const notifications = await generateNotificationsByChatId(testChatId);
+//     // --- Thực thi hàm cần test -generateNotificationsByChatId--
+//     console.log(`\nĐang tạo thông báo cho chat_id: '${testChatId}'...`);
+//     const notifications = await generateNotificationsByChatId(testChatId);
 
-    // --- Kiểm tra kết quả ---
-    if (notifications.length > 0) {
-      console.log(`\nTìm thấy ${notifications.length} thông báo cho chat_id '${testChatId}':`);
-      notifications.forEach((noti, index) => {
-        console.log(`  Thông báo ${index + 1}:`);
-        console.log(`    ID: ${noti.id}`);
-        console.log(`    Tiêu đề: ${noti.title}`);
-        console.log(`    Loại: ${noti.type}`);
-        console.log(`    Kỹ năng: ${noti.skills.join(', ')}`);
-        console.log(`    Khu vực: ${noti.region}`);
-        console.log(`    Published At: ${noti.publishedAt}`);
-        console.log(`    Trạng thái: ${noti.status}`);
-        console.log('---');
-      });
-    } else {
-      console.log(`\nKhông tìm thấy thông báo nào cho chat_id '${testChatId}'.`);
-    }
+//     // --- Kiểm tra kết quả ---
+//     if (notifications.length > 0) {
+//       console.log(`\nTìm thấy ${notifications.length} thông báo cho chat_id '${testChatId}':`);
+//       notifications.forEach((noti, index) => {
+//         console.log(`  Thông báo ${index + 1}:`);
+//         console.log(`    ID: ${noti.id}`);
+//         console.log(`    Tiêu đề: ${noti.title}`);
+//         console.log(`    Loại: ${noti.type}`);
+//         console.log(`    Kỹ năng: ${noti.skills.join(', ')}`);
+//         console.log(`    Khu vực: ${noti.region}`);
+//         console.log(`    Published At: ${noti.publishedAt}`);
+//         console.log(`    Trạng thái: ${noti.status}`);
+//         console.log('---');
+//       });
+//     } else {
+//       console.log(`\nKhông tìm thấy thông báo nào cho chat_id '${testChatId}'.`);
+//     }
 
-    // --- Test trường hợp không có session ---
-    const nonExistentChatId = "non_existent_chat_id";
-    console.log(`\nĐang tạo thông báo cho chat_id không tồn tại: '${nonExistentChatId}'...`);
-    const noNotifications = await generateNotificationsByChatId(nonExistentChatId);
-    if (noNotifications.length === 0) {
-      console.log(`  Kết quả đúng: Không tìm thấy thông báo nào cho chat_id '${nonExistentChatId}'.`);
-    } else {
-      console.error(`  Kết quả SAI: Tìm thấy thông báo cho chat_id không tồn tại.`);
-    }
+//     // --- Test trường hợp không có session ---
+//     const nonExistentChatId = "non_existent_chat_id";
+//     console.log(`\nĐang tạo thông báo cho chat_id không tồn tại: '${nonExistentChatId}'...`);
+//     const noNotifications = await generateNotificationsByChatId(nonExistentChatId);
+//     if (noNotifications.length === 0) {
+//       console.log(`  Kết quả đúng: Không tìm thấy thông báo nào cho chat_id '${nonExistentChatId}'.`);
+//     } else {
+//       console.error(`  Kết quả SAI: Tìm thấy thông báo cho chat_id không tồn tại.`);
+//     }
 
-  } catch (error: any) {
-    console.error("Đã xảy ra lỗi trong quá trình test:", error);
-  } finally {
-    // Đảm bảo đóng kết nối Prisma
-    await prisma.$disconnect();
-    console.log("\nĐã đóng kết nối Prisma.");
-  }
-}
-
+//   } catch (error: any) {
+//     console.error("Đã xảy ra lỗi trong quá trình test:", error);
+//   } finally {
+//     // Đảm bảo đóng kết nối Prisma
+//     await prisma.$disconnect();
+//     console.log("\nĐã đóng kết nối Prisma.");
+//   }
+// }
 
 export async function generateNotifications(sessionData: SessionData): Promise<NotificationData[]> {
   try {
@@ -2026,40 +2026,47 @@ export async function generateNotificationsByChatId(chat_id: string): Promise<No
   }
 }
 
-export async function getNewstForMe(chat_id: string): Promise<NotificationData[]> {
+export async function getNotificationsDataBySessionData(session: SessionData): Promise<NotificationData[]> {
   try {
-    // 1. Lấy tất cả session data cho chat_id được cung cấp
-    const sessions = await getSessionsByChatId(chat_id);
+    const sessionData = session;
+    const notifications = NEW_LISTING
+      .filter((listing) => {
+        // Check if listing matches session criteria
+        const matchesType = (sessionData.isProjects && listing.type === 'project') ||
+                            (sessionData.isBounties && listing.type === 'bounty');
+        const matchesSkills = listing.skills.length === 0 ||
+                              listing.skills.some((skill) => sessionData.skills.indexOf(skill) >= 0);
+        const matchesLocation = listing.region.toUpperCase() === sessionData.location.toUpperCase() || listing.region.toUpperCase() === "GLOBAL";
+        const matchesStatus = listing.status === 'OPEN';
+        return sessionData.isEnableNoti &&
+               matchesType &&
+               matchesSkills &&
+               matchesLocation &&
+               matchesStatus;
+      });
+    return notifications;
+  } catch (error: any) {
+    return [];
+  }
+}
 
-    // 2. Nếu không tìm thấy session nào, trả về mảng rỗng
-    if (sessions.length === 0) {
-      console.log(`Không tìm thấy session nào cho chat_id '${chat_id}'.`);
-      return [];
-    }
+export async function getPreferenceNoti(ctx: MyContext): Promise<NotificationData[]> {
+  try {
+    const numNews = 5;
+    let allNotifications = await getNotificationsDataBySessionData(ctx.session);
+    return allNotifications.slice(0, numNews);
+  } catch (error: any) {
+    return [];
+  }
+}
 
-    // 3. Duyệt qua từng session và tạo thông báo
-    let allNotifications: NotificationData[] = [];
-    for (const session of sessions) {
-      // Đảm bảo session.isEnableNoti là true trước khi tạo thông báo
-      if (session.isEnableNoti) {
-        try {
-          const notificationsForSession = await generateNotifications(session);
-          allNotifications = allNotifications.concat(notificationsForSession);
-        } catch (notificationError) {
-          console.error(`Lỗi khi tạo thông báo cho session của chat_id '${chat_id}':`, notificationError);
-          // Tiếp tục với các session khác nếu có lỗi
-        }
-      } else {
-        console.log(`Session cho chat_id '${chat_id}' không bật thông báo (isEnableNoti = false).`);
-      }
-    }
-
-    // Trả về tất cả các thông báo đã tạo
+export async function getNewestCampaigns(): Promise<NotificationData[]> {
+  try {
+    const numNews = 5;
+    let allNotifications = NEW_LISTING.slice(0, numNews);
     return allNotifications;
   } catch (error: any) {
-    console.error(`Lỗi tổng quát khi tạo thông báo cho chat_id '${chat_id}':`, error);
-    // Ném lỗi để xử lý ở tầng cao hơn
-    throw new Error(`Không thể tạo thông báo cho chat_id '${chat_id}': ${error.message}`);
+    return [];
   }
 }
 

@@ -4,6 +4,7 @@ import { replySettings } from './settings';
 import { replyHelp } from './help';
 import { wrapperMarkdown } from '../utils';
 import { NotificationData } from '../type';
+import { getNewestCampaigns, getPreferenceNoti } from '../database';
 
 const composer = new Composer<MyContext>();
 
@@ -57,13 +58,19 @@ export const replyStart = (ctx: MyContext, isEdit: boolean = false) => {
     }
 }
 
-const handleNewst = async (ctx: MyContext) => {
-    let newCampaigns : NotificationData[] = [];
+const handleNewestCampaign = async (ctx: MyContext) => {
+    if (!ctx.chatId)
+        return;
+    let newCampaigns = await getNewestCampaigns();
+    console.log("Data: ", newCampaigns.length);
     sendNotifications(ctx,newCampaigns);
 }
 
 const handleForMe = async (ctx: MyContext) => {
-    let filterCampaigns: NotificationData[] = [];
+    if (!ctx.chatId)
+        return;
+    let filterCampaigns = await getPreferenceNoti(ctx);
+    console.log("Data: ", filterCampaigns.length);
     sendNotifications(ctx,filterCampaigns);
 }
 
@@ -140,7 +147,7 @@ composer.command('start', (ctx) => {
 });
 
 composer.command('newest', (ctx) => {
-    handleNewst(ctx);
+    handleNewestCampaign(ctx);
 });
 
 composer.command('forme', (ctx) => {
@@ -149,7 +156,7 @@ composer.command('forme', (ctx) => {
 
 // register callback Query
 composer.callbackQuery('startNewestCampaign', ctx => { 
-    handleNewst(ctx);
+    handleNewestCampaign(ctx);
 });
 
 composer.callbackQuery('startCampaigns', ctx => { 
