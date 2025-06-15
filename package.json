@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/GnoudNart/superteam_earn_notifications_bot#readme",
   "dependencies": {
+    "@grammyjs/conversations": "^2.1.0",
     "@grammyjs/storage-free": "^2.5.1",
     "@types/node": "^22.15.30",
     "grammy": "^1.36.3",
