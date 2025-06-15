@@ -23,6 +23,7 @@
   "dependencies": {
     "@grammyjs/conversations": "^2.1.0",
     "@grammyjs/storage-free": "^2.5.1",
+    "@grammyjs/storage-prisma": "^2.5.1",
     "@prisma/client": "^6.9.0",
     "@types/node": "^22.15.30",
     "express": "^4.18.2",
