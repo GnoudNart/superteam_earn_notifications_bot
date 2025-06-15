@@ -1,10 +1,15 @@
-import { Bot, Context, GrammyError, HttpError, session, SessionFlavor } from "grammy";
+import { Bot, Context, GrammyError, HttpError, session, SessionFlavor, webhookCallback } from "grammy";
 import {
     type ConversationFlavor,
     conversations,
 } from "@grammyjs/conversations";
 import * as dotenv from 'dotenv';
 import { SocksProxyAgent } from "socks-proxy-agent";
+
+// Import PrismaClient and PrismaAdapter
+import { PrismaClient } from "@prisma/client";
+import { PrismaAdapter } from "@grammyjs/storage-prisma";
+
 import start from "./handlers/start";
 import settings, { replySettings } from "./handlers/settings";
 import help from "./handlers/help";
@@ -14,10 +19,11 @@ import valueUSD from "./handlers/valueUSD";
 
 dotenv.config();
 
+export const prisma = new PrismaClient();
 
-const socksAgent = new SocksProxyAgent(process.env.PROXY_HOST!);
+const socksAgent = process.env.USE_PROXY ? new SocksProxyAgent(process.env.PROXY_HOST!) : undefined;
 
-// Define the SessionData structure. 
+// Define the SessionData structure.
 interface SessionData {
     activeMessageId: number;
     minValue: number;
@@ -34,7 +40,7 @@ interface SessionData {
 export type MyContext = Context & SessionFlavor<SessionData> & ConversationFlavor<Context>;
 
 let botConfig = {};
-if (process.env.USE_PROXY) {
+if (process.env.USE_PROXY && socksAgent) {
     botConfig = {
         client: {
             baseFetchConfig: {
@@ -42,10 +48,10 @@ if (process.env.USE_PROXY) {
                 compress: true,
             },
         },
-    }
+    };
 }
 
-const bot = new Bot<MyContext>(process.env.TELEGRAM_BOT_TOKEN!, botConfig);
+export const bot = new Bot<MyContext>(process.env.TELEGRAM_BOT_TOKEN!, botConfig);
 
 // Creates a new object that will be used as initial SessionData data.
 function createInitialSessionData() {
@@ -63,8 +69,15 @@ function createInitialSessionData() {
     };
 }
 
-bot.use(session({ initial: createInitialSessionData }));
+bot.use(session({
+    initial: createInitialSessionData,
+    storage: new PrismaAdapter(prisma.session)
+}));
+
+// Use conversation middleware for multi-step interactions
 bot.use(conversations());
+
+// Register your bot handlers
 bot.use(start);
 bot.use(settings);
 bot.use(help);
@@ -72,16 +85,18 @@ bot.use(bounty);
 bot.use(skills);
 bot.use(valueUSD);
 
-// Handle other messages.
+// Handle other messages (not explicitly handled by other middleware)
 bot.on("message", (ctx) => {
     console.log("Got message!: " + ctx.message.text);
 });
 
+// Handle unknown callback queries
 bot.on("callback_query:data", async (ctx) => {
     console.log("Unknown button event with payload fallback here: ", ctx.callbackQuery.data);
-    await ctx.answerCallbackQuery("Comming Soon!");
+    await ctx.answerCallbackQuery("Coming Soon!"); // Corrected typo: "Comming" to "Coming"
 });
 
+// Error handling middleware
 bot.catch((err) => {
     const ctx = err.ctx;
     console.error(`Error while handling update ${ctx.update.update_id}:`);
@@ -106,7 +121,10 @@ bot.api.setMyCommands([
 ]);
 
 // Start the bot.
-console.log("Starting the bot...")
-bot.start()
-    .then(() => console.log("Bot is running..."))
-    .catch((err) => console.error("Failed to launch bot:", err));
+// console.log("Starting the bot...")
+// bot.start()
+//     .then(() => console.log("Bot is running..."))
+//     .catch((err) => console.error("Failed to launch bot:", err));
+//
+
+export const webhookHandler = webhookCallback(bot, 'express')

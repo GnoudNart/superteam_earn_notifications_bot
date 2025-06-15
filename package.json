@@ -4,9 +4,10 @@
   "description": "Superteam Earn Notifications Bot is a Telegram Bot that sends notifications of available campaigns from https://earn.superteam.fun to users according to their settings.",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/bot.ts",
-    "build": "tsc",
-    "start:prod": "node dist/bot.js"
+    "build": "npx prisma migrate deploy && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node api/index.ts",
+    "postinstall": "npx prisma generate --no-engine"
   },
   "repository": {
     "type": "git",
@@ -22,13 +23,18 @@
   "dependencies": {
     "@grammyjs/conversations": "^2.1.0",
     "@grammyjs/storage-free": "^2.5.1",
+    "@grammyjs/storage-prisma": "^2.5.1",
+    "@prisma/client": "^6.9.0",
     "@types/node": "^22.15.30",
+    "@vercel/node": "^5.2.2",
+    "express": "^4.18.2",
     "grammy": "^1.36.3",
     "socks-proxy-agent": "^8.0.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "dotenv": "^16.5.0"
+    "dotenv": "^16.5.0",
+    "prisma": "^6.9.0"
   }
 }
