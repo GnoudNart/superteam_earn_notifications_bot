@@ -45,7 +45,7 @@ if (process.env.USE_PROXY) {
     }
 }
 
-const bot = new Bot<MyContext>(process.env.TELEGRAM_BOT_TOKEN!, botConfig);
+export const bot = new Bot<MyContext>(process.env.TELEGRAM_BOT_TOKEN!, botConfig);
 
 // Creates a new object that will be used as initial SessionData data.
 function createInitialSessionData() {
@@ -112,7 +112,4 @@ bot.api.setMyCommands([
 //     .catch((err) => console.error("Failed to launch bot:", err));
 //
 
-module.exports = {
-  bot,
-  webhookHandler: webhookCallback(bot),
-};
+export const webhookHandler = webhookCallback(bot);
