@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 import { webhookHandler } from '../src/bot';
 import { bot, MyContext } from '../src/bot';
-import { getUserIdsFromDatabase, checkDatabaseConnection, prisma } from '../src/database';
+import { getUserIdsFromDatabase, checkDatabaseConnection, prisma, getFilteredSessionsMap } from '../src/database';
 
 // Create application/x-www-form-urlencoded parser
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -299,5 +299,21 @@ app.delete('/api/sessions/:id', async (req, res) => {
     }
 });
 
+
+app.get('/getFilteredSessionsMap', async (req, res) => {
+    try {
+
+        // Call the exported getFilteredSessions function
+        const filteredSessionsMap = await getFilteredSessionsMap();
+
+        // Convert any BigInt values in the fetched sessions array to strings
+        const serializableSessions = bigIntToString(filteredSessionsMap);
+
+        res.status(200).json(serializableSessions);
+    } catch (error) {
+        console.error('Error fetching filtered sessions:', error);
+        res.status(500).json({ status: 'error', message: 'Failed to fetch filtered sessions.' });
+    }
+});
 
 module.exports = app;

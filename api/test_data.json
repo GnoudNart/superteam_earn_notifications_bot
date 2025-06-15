@@ -1,0 +1,2648 @@
+[
+    {
+        "id": "ffcbf5cc-99da-4ab1-ae72-b792cec83cfc",
+        "rewardAmount": 4000,
+        "deadline": "2025-06-14T10:32:20.701Z",
+        "type": "project",
+        "title": "Frontend/Fullstack Engineer - Sentient Struggle",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "frontendfullstack-engineer-grit-labs",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 12,
+            "Submission": 118
+        },
+        "sponsor": {
+            "name": "Grit Labs",
+            "slug": "gritlabs",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1748687162/fst6ubgmtkncdumue9wu.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Solidity",
+            "Ruby on Rails",
+            "Other",
+            "Photography",
+            "Other"
+        ],
+        "deadline_utc_parsed": "2025-06-14T10:32:20.701Z",
+        "region": "MALAYSIA",
+        "publishedAt": "2025-06-12T10:32:20.701Z"
+    },
+    {
+        "id": "27e31606-92be-41ba-a733-d3d81f500f70",
+        "rewardAmount": 2000,
+        "deadline": "2025-06-14T20:59:07.000Z",
+        "type": "bounty",
+        "title": "Build your App with AI on Solana: AImpact Beta Challenge",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "aimpact-beta-challenge",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 19,
+            "Submission": 50
+        },
+        "sponsor": {
+            "name": "Kumeka Team",
+            "slug": "@KumekaTeam",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1724392466/earn-sponsor/lb30llj4exe1flqinfyk.png",
+            "isVerified": true,
+            "st": false
+        },
+        "skills": [
+            "Java",
+            "Business Development",
+            "Product Manager",
+            "Django",
+            "Photography",
+            "Elm"
+        ],
+        "deadline_utc_parsed": "2025-06-14T20:59:07.000Z",
+        "region": "ARGENTINA",
+        "publishedAt": "2025-06-12T20:59:07.000Z"
+    },
+    {
+        "id": "89fc0d52-7474-4a7e-95d2-bb5ded29401e",
+        "rewardAmount": 15000,
+        "deadline": "2025-06-15T21:59:37.000Z",
+        "type": "bounty",
+        "title": "dev.fun World Cup powered by Solana",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "devfun-world-cup-powered-by-solana",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 27,
+            "Submission": 97
+        },
+        "sponsor": {
+            "name": "Dev.fun",
+            "slug": "devfun",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1742820318/fkcfzsvuoqhki1jbyqum.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Erlang"
+        ],
+        "deadline_utc_parsed": "2025-06-15T21:59:37.000Z",
+        "region": "BALKAN",
+        "publishedAt": "2025-06-15T21:59:37.000Z"
+    },
+    {
+        "id": "d79f0356-7c55-44c1-a05c-fa18e3672e25",
+        "rewardAmount": 1000,
+        "deadline": "2025-06-15T23:25:03.000Z",
+        "type": "bounty",
+        "title": "Develop Telegram Bot for Superteam Earn Notifications",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "telegram-bot-for-earn",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 5,
+            "Submission": 2
+        },
+        "sponsor": {
+            "name": "Superteam",
+            "slug": "superteam",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1713357709/earn-sponsor/lcpnjbldadf03dqojg1j.png",
+            "isVerified": true,
+            "st": true
+        },
+        "skills": [
+            "Social Media"
+        ],
+        "deadline_utc_parsed": "2025-06-15T23:25:03.000Z",
+        "region": "UK",
+        "publishedAt": "2025-06-15T23:25:03.000Z"
+    },
+    {
+        "id": "6946539a-206c-40e2-ad91-a63815e203d3",
+        "rewardAmount": 1000,
+        "deadline": "2025-06-16T07:00:39.000Z",
+        "type": "bounty",
+        "title": "Create the Best Twitter Thread on Yield Trading Using Asgard",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "trade-yields-on-asgard",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 18,
+            "Submission": 25
+        },
+        "sponsor": {
+            "name": "Asgard Finance",
+            "slug": "asgardfi",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1749110371/csw3wx9x7nko7xguz8eo.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "SolidJS",
+            "Solidity",
+            "Erlang",
+            "PHP"
+        ],
+        "deadline_utc_parsed": "2025-06-16T07:00:39.000Z",
+        "region": "POLAND",
+        "publishedAt": "2025-06-14T07:00:39.000Z"
+    },
+    {
+        "id": "d93d940e-49b7-482b-8cbb-5407e3f637c1",
+        "rewardAmount": 200,
+        "deadline": "2025-06-16T11:00:49.557Z",
+        "type": "project",
+        "title": "Dune Analytics Dashboard Developer for Credible",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "dune-analytics-dashboard-developer-for-credible",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 0,
+            "Submission": 10
+        },
+        "sponsor": {
+            "name": "Credible Finance",
+            "slug": "crediblefinance",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1717155094/earn-sponsor/tzoq3dz8vij5fzz9spia.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Discord Moderator",
+            "Video Editing",
+            "Other",
+            "React Native",
+            "Graphic Design",
+            "Android"
+        ],
+        "deadline_utc_parsed": "2025-06-16T11:00:49.557Z",
+        "region": "ISRAEL",
+        "publishedAt": "2025-06-15T11:00:49.557Z"
+    },
+    {
+        "id": "b9a8fe38-7b96-492d-9bfa-0dae53f56477",
+        "rewardAmount": 600,
+        "deadline": "2025-06-17T09:00:33.139Z",
+        "type": "bounty",
+        "title": "Sanctum is Hiring a Pixel Wizard! 🧙☁️",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "sanctum-is-hiring-a-pixel-wizard-sf",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 1,
+            "Submission": 6
+        },
+        "sponsor": {
+            "name": "Sanctum",
+            "slug": "sanctum",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1717735691/earn-sponsor/zcfcjd8xetrvevrgx6pv.png",
+            "isVerified": true,
+            "st": false
+        },
+        "skills": [
+            "Community Manager",
+            "Go",
+            "Digital Marketing",
+            "Other"
+        ],
+        "deadline_utc_parsed": "2025-06-17T09:00:33.139Z",
+        "region": "MALAYSIA",
+        "publishedAt": "2025-06-15T09:00:33.139Z"
+    },
+    {
+        "id": "bacd7dd4-e6e7-4625-ae7a-adb57d3e3f28",
+        "rewardAmount": 100,
+        "deadline": "2025-06-17T21:11:32.927Z",
+        "type": "bounty",
+        "title": "Write a Thread about V* by Bad Environment Club",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "write-a-thread-about-v-by-bad-environment-club",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 13,
+            "Submission": 15
+        },
+        "sponsor": {
+            "name": "Bad Environment Club",
+            "slug": "bad-environment-club",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1748976171/juehqktivguvhusmcsud.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Research",
+            "Kotlin",
+            "Laravel",
+            "Game Design",
+            "React Native"
+        ],
+        "deadline_utc_parsed": "2025-06-17T21:11:32.927Z",
+        "region": "FRANCE",
+        "publishedAt": "2025-06-17T21:11:32.927Z"
+    },
+    {
+        "id": "7871a4cf-d99f-4f30-bd76-65cf39346cd4",
+        "rewardAmount": 500,
+        "deadline": "2025-06-17T21:59:42.000Z",
+        "type": "bounty",
+        "title": "Write a Twitter thread",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "klonborgpad",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 10,
+            "Submission": 26
+        },
+        "sponsor": {
+            "name": "Borgpad",
+            "slug": "borgpad",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1738686845/km851z3b69e87xpyizrz.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Marketing",
+            "Kotlin"
+        ],
+        "deadline_utc_parsed": "2025-06-17T21:59:42.000Z",
+        "region": "VIETNAM",
+        "publishedAt": "2025-06-16T21:59:42.000Z"
+    },
+    {
+        "id": "fb1343d4-3e1f-4d48-9696-b034f2376399",
+        "rewardAmount": 20000,
+        "deadline": "2025-06-18T10:25:59.000Z",
+        "type": "bounty",
+        "title": "Write a Twitter Thread Promoting Solana App Kit",
+        "token": "SEND",
+        "winnersAnnouncedAt": null,
+        "slug": "write-a-banger-twitter-thread-promoting-solana-app-kit",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 27,
+            "Submission": 37
+        },
+        "sponsor": {
+            "name": "thesendcoin",
+            "slug": "thesendintern",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1739275179/eir32u7hbrhee79kyuoa.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Business Development",
+            "MongoDB",
+            "Solidity",
+            "Dart",
+            "Pearl"
+        ],
+        "deadline_utc_parsed": "2025-06-18T10:25:59.000Z",
+        "region": "VIETNAM",
+        "publishedAt": "2025-06-16T10:25:59.000Z"
+    },
+    {
+        "id": "76afa4dd-43b2-4d94-9dcf-5c519fcc7fef",
+        "rewardAmount": null,
+        "deadline": "2025-06-18T14:46:23.530Z",
+        "type": "project",
+        "title": "Community Manager for Stealth Gamified Trading Platform",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "community-manager-for-stealth-gamified-trading-platform",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "variable",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 4,
+            "Submission": 23
+        },
+        "sponsor": {
+            "name": "Blue7",
+            "slug": "Blue7",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/earn-sponsors/fiucggqv7ymfyrjmcv8w.jpg",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "React",
+            "Javascript"
+        ],
+        "deadline_utc_parsed": "2025-06-18T14:46:23.530Z",
+        "region": "JAPAN",
+        "publishedAt": "2025-06-18T14:46:23.530Z"
+    },
+    {
+        "id": "759dc10c-9581-4893-b2b0-f453fc8998ba",
+        "rewardAmount": 300,
+        "deadline": "2025-06-18T22:00:13.000Z",
+        "type": "bounty",
+        "title": "Balkan Students Content Competition",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "balkan-student-content-competition",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 0,
+            "Submission": 1
+        },
+        "sponsor": {
+            "name": "Bitget",
+            "slug": "bitget",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1737888459/bcsxxtptljpmju4eytwh.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Community Manager",
+            "Product Feedback",
+            "Elm",
+            "Photography",
+            "Javascript"
+        ],
+        "deadline_utc_parsed": "2025-06-18T22:00:13.000Z",
+        "region": "INDIA",
+        "publishedAt": "2025-06-17T22:00:13.000Z"
+    },
+    {
+        "id": "1fa39994-9ce1-4f1a-a745-e1e3905299ef",
+        "rewardAmount": 150,
+        "deadline": "2025-06-19T12:28:49.000Z",
+        "type": "project",
+        "title": "Calling ALL Solana hodlers & meme coiners (Noobs to Pro Trenchers) 🚀",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "calling-all-solana-hodlers-and-meme-coiners-noobs-to-pro-trenchers",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 77,
+            "Submission": 277
+        },
+        "sponsor": {
+            "name": "Solana Wallet Tracker",
+            "slug": "solanawallettracker",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1743765704/n3djzmiar1whzdbnvyqq.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Product Manager",
+            "UI/UX Design",
+            "MySQL"
+        ],
+        "deadline_utc_parsed": "2025-06-19T12:28:49.000Z",
+        "region": "FRANCE",
+        "publishedAt": "2025-06-18T12:28:49.000Z"
+    },
+    {
+        "id": "8ff4860b-d00f-4cca-836c-b0228592c4e3",
+        "rewardAmount": 1000,
+        "deadline": "2025-06-20T06:59:40.000Z",
+        "type": "bounty",
+        "title": "Write a Twitter thread about Global Dollar Network",
+        "token": "USDG",
+        "winnersAnnouncedAt": null,
+        "slug": "write-a-twitter-thread-about-global-dollar-network",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 6,
+            "Submission": 8
+        },
+        "sponsor": {
+            "name": "Global Dollar Network",
+            "slug": "global-dollar-network",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1742879378/v9mlyq0zb2yad3mjvh2i.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Python",
+            "Other",
+            "Redux",
+            "C++"
+        ],
+        "deadline_utc_parsed": "2025-06-20T06:59:40.000Z",
+        "region": "ARGENTINA",
+        "publishedAt": "2025-06-19T06:59:40.000Z"
+    },
+    {
+        "id": "1410bb0c-56b5-408c-a0be-487102de7960",
+        "rewardAmount": 350,
+        "deadline": "2025-06-20T10:34:30.000Z",
+        "type": "bounty",
+        "title": "🎬 \"THE FUTURE OF FINANCE\" TEASER VIDEO",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "the-future-of-finance-teaser-video",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 77,
+            "Submission": 82
+        },
+        "sponsor": {
+            "name": "Globachain",
+            "slug": "globachain",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1732083707/c59sxgffd6bb8jj0ccem.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Other",
+            "Android",
+            "Pearl",
+            "React Native",
+            "Elm",
+            "Game Design"
+        ],
+        "deadline_utc_parsed": "2025-06-20T10:34:30.000Z",
+        "region": "SPAIN",
+        "publishedAt": "2025-06-18T10:34:30.000Z"
+    },
+    {
+        "id": "72640acb-02ae-41a4-bdc1-d7a918bafff8",
+        "rewardAmount": 105,
+        "deadline": "2025-06-20T19:21:59.000Z",
+        "type": "bounty",
+        "title": "Write a Twitter thread about Sorcerer Extension",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "write-a-twitter-thread-about-sorcerer-extension",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 5,
+            "Submission": 6
+        },
+        "sponsor": {
+            "name": "Sorcerer",
+            "slug": "sorcerer",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1738158690/wfnm951uwdriwvfcroy7.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Haskell",
+            "MySQL",
+            "PHP",
+            "Digital Marketing"
+        ],
+        "deadline_utc_parsed": "2025-06-20T19:21:59.000Z",
+        "region": "BALKAN",
+        "publishedAt": "2025-06-19T19:21:59.000Z"
+    },
+    {
+        "id": "a085ae72-fdff-4697-8574-0c6b8e4e2279",
+        "rewardAmount": 200,
+        "deadline": "2025-06-20T20:30:11.140Z",
+        "type": "bounty",
+        "title": "Frontrun.pro X & Reddit Power-Poster Contest — Drive Beta Sign-Ups, Grab USDC",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "frontrunpro-x-and-reddit-power-poster-contest-drive-beta-sign-ups-grab-usdc",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 0,
+            "Submission": 3
+        },
+        "sponsor": {
+            "name": "Frontrun.pro",
+            "slug": "frontrunpro",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1749237985/dxackt3lo1f3yn4dkyhl.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Video",
+            "MongoDB",
+            "Presentation Design",
+            "Django",
+            "Go",
+            "Product Manager"
+        ],
+        "deadline_utc_parsed": "2025-06-20T20:30:11.140Z",
+        "region": "BALKAN",
+        "publishedAt": "2025-06-18T20:30:11.140Z"
+    },
+    {
+        "id": "9cf2d0bb-ac4d-4b09-9386-8034938b3594",
+        "rewardAmount": null,
+        "deadline": "2025-06-23T06:51:46.572Z",
+        "type": "project",
+        "title": "Solana Mobile Developer Intern for HeySolana",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "solana-mobile-developer-intern-for-heysolana",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "range",
+        "minRewardAsk": 200,
+        "maxRewardAsk": 500,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 8,
+            "Submission": 38
+        },
+        "sponsor": {
+            "name": "Hey Solana",
+            "slug": "yrayheysolana",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1747594578/rolsk9yt4agyei5pgxc1.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Product Manager",
+            "Ruby on Rails",
+            "Python",
+            "Other",
+            "Solidity"
+        ],
+        "deadline_utc_parsed": "2025-06-23T06:51:46.572Z",
+        "region": "MEXICO",
+        "publishedAt": "2025-06-23T06:51:46.572Z"
+    },
+    {
+        "id": "d70976a9-554a-4e29-9769-5016376e2509",
+        "rewardAmount": 1,
+        "deadline": "2025-06-24T10:00:25.000Z",
+        "type": "bounty",
+        "title": "EthCC 2025 is calling!",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "ethcc-2025-is-calling",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 1,
+            "Submission": 0
+        },
+        "sponsor": {
+            "name": "Neon EVM",
+            "slug": "Neon_EVM",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1715082967/earn-sponsor/lqxv4jzq4og6xwp68aum.png",
+            "isVerified": true,
+            "st": false
+        },
+        "skills": [
+            "Dart",
+            "Swift",
+            "Go",
+            "Graphic Design",
+            "Other"
+        ],
+        "deadline_utc_parsed": "2025-06-24T10:00:25.000Z",
+        "region": "UKRAINE",
+        "publishedAt": "2025-06-22T10:00:25.000Z"
+    },
+    {
+        "id": "59769d59-1e58-4965-92e2-bfa034a22680",
+        "rewardAmount": 1750,
+        "deadline": "2025-06-25T18:10:55.505Z",
+        "type": "bounty",
+        "title": "$ME Staking Rewards - Video Bounty",
+        "token": "ME",
+        "winnersAnnouncedAt": null,
+        "slug": "magic-eden-staking-rewards",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 1,
+            "Submission": 2
+        },
+        "sponsor": {
+            "name": "Magic Eden",
+            "slug": "magic-eden",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1679901436/earn-sponsors/recmK6Ynz8HMpa5Wk.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Deno",
+            "Move"
+        ],
+        "deadline_utc_parsed": "2025-06-25T18:10:55.505Z",
+        "region": "SPAIN",
+        "publishedAt": "2025-06-25T18:10:55.505Z"
+    },
+    {
+        "id": "beb3d206-8733-4a66-b8ea-ad0e327af752",
+        "rewardAmount": 300,
+        "deadline": "2025-06-25T20:36:49.984Z",
+        "type": "bounty",
+        "title": "Write a Twitter Thread on Owners Club Experience",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "write-a-twitter-thread-on-owners-club-experience",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 3,
+            "Submission": 5
+        },
+        "sponsor": {
+            "name": "Owners Club ",
+            "slug": "ownersclub",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1748987652/qnpotvfmuoo6g8zkh9xs.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Deno",
+            "Haskell"
+        ],
+        "deadline_utc_parsed": "2025-06-25T20:36:49.984Z",
+        "region": "USA",
+        "publishedAt": "2025-06-25T20:36:49.984Z"
+    },
+    {
+        "id": "8701c9bb-29af-4a0e-8734-48134f76e222",
+        "rewardAmount": null,
+        "deadline": "2025-06-25T23:05:27.741Z",
+        "type": "project",
+        "title": "🚨Hiring animated short-form video editor (Montage/Story editing)",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "short-form-animated-movie-editor-music-meets-motion",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "range",
+        "minRewardAsk": 500,
+        "maxRewardAsk": 2500,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 1,
+            "Submission": 12
+        },
+        "sponsor": {
+            "name": "Cryptowood",
+            "slug": "cryptowood",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1748691304/neydklfry2ak47k9fqfq.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Research",
+            "Other"
+        ],
+        "deadline_utc_parsed": "2025-06-25T23:05:27.741Z",
+        "region": "BALKAN",
+        "publishedAt": "2025-06-23T23:05:27.741Z"
+    },
+    {
+        "id": "bf7fefa0-b5c3-4cfe-bb51-2c776877b0a3",
+        "rewardAmount": 150,
+        "deadline": "2025-06-27T12:48:58.000Z",
+        "type": "bounty",
+        "title": "Make a comic showing travel pain & BukProtocol’s solution using its brand theme.",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "make-a-comic-showing-travel-pain-and-bukprotocols-solution-using-its-brand-theme",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 5,
+            "Submission": 6
+        },
+        "sponsor": {
+            "name": "BukProtocol",
+            "slug": "bukprotocol",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1740043939/fl6vqlqpndfnxe2fztbk.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Typescript",
+            "Graphic Design",
+            "Svelte",
+            "Elm",
+            "MySQL"
+        ],
+        "deadline_utc_parsed": "2025-06-27T12:48:58.000Z",
+        "region": "ARGENTINA",
+        "publishedAt": "2025-06-25T12:48:58.000Z"
+    },
+    {
+        "id": "65cfca17-c12a-4098-88d1-4de26dc29af4",
+        "rewardAmount": 1500,
+        "deadline": "2025-06-27T16:59:48.000Z",
+        "type": "bounty",
+        "title": "Tokenizing Web2 Marketplaces in SEA",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "tokenizing-web2-marketplaces-in-sea",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 15,
+            "Submission": 38
+        },
+        "sponsor": {
+            "name": "Superteam Vietnam",
+            "slug": "superteamvn",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1735886811/htpwcjtol1xluk8r6ngb.png",
+            "isVerified": true,
+            "st": true
+        },
+        "skills": [
+            "ASP.NET",
+            "Other",
+            "UI/UX Design"
+        ],
+        "deadline_utc_parsed": "2025-06-27T16:59:48.000Z",
+        "region": "BRAZIL",
+        "publishedAt": "2025-06-27T16:59:48.000Z"
+    },
+    {
+        "id": "3ed088f2-e555-408e-bb6e-b776ea12e4e9",
+        "rewardAmount": 1500,
+        "deadline": "2025-06-29T17:59:43.000Z",
+        "type": "bounty",
+        "title": "Web3 M&A Report 2024–2025 (Solana Focus)",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "web3-manda-report-2024-2025-solana-focus",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 0,
+            "Submission": 1
+        },
+        "sponsor": {
+            "name": "Superteam Vietnam",
+            "slug": "superteamvn",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1735886811/htpwcjtol1xluk8r6ngb.png",
+            "isVerified": true,
+            "st": true
+        },
+        "skills": [
+            "Node.js",
+            "Other"
+        ],
+        "deadline_utc_parsed": "2025-06-29T17:59:43.000Z",
+        "region": "FRANCE",
+        "publishedAt": "2025-06-27T17:59:43.000Z"
+    },
+    {
+        "id": "9f9cc5be-832c-43fe-ba1f-cd76ceb9d827",
+        "rewardAmount": 500,
+        "deadline": "2025-06-30T07:29:15.000Z",
+        "type": "bounty",
+        "title": "Solana Spotlight: Bringing Crypto to Everyday Nepalis",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "solana-spotlight-bringing-crypto-to-everyday-nepalis",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 0,
+            "Submission": 0
+        },
+        "sponsor": {
+            "name": "Superteam Nepal",
+            "slug": "superteamnp",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1743757798/q1mv5sk40sjzju2gdvur.png",
+            "isVerified": false,
+            "st": true
+        },
+        "skills": [
+            "Other",
+            "Other",
+            "Kotlin",
+            "Product Feedback"
+        ],
+        "deadline_utc_parsed": "2025-06-30T07:29:15.000Z",
+        "region": "VIETNAM",
+        "publishedAt": "2025-06-30T07:29:15.000Z"
+    },
+    {
+        "id": "0817a1b9-73dc-4f53-aa3d-a7d68c688d95",
+        "rewardAmount": 1000,
+        "deadline": "2025-06-30T12:00:43.000Z",
+        "type": "bounty",
+        "title": "Toby Network Content War - 1,000 USDC & █████ 🦦",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "toby-content-war",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 18,
+            "Submission": 31
+        },
+        "sponsor": {
+            "name": "Toby Network",
+            "slug": "toby",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1723042426/earn-sponsor/hu7ao65no9y7pjqzhjff.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Writing",
+            "Django",
+            "Java",
+            "Other"
+        ],
+        "deadline_utc_parsed": "2025-06-30T12:00:43.000Z",
+        "region": "TURKEY",
+        "publishedAt": "2025-06-29T12:00:43.000Z"
+    },
+    {
+        "id": "df5c723e-ad60-440b-a70d-98d973aafd17",
+        "rewardAmount": 1000,
+        "deadline": "2025-06-30T15:59:46.000Z",
+        "type": "bounty",
+        "title": "Create A Video, Memes, or a Twitter Thread for SecondSwap",
+        "token": "USDT",
+        "winnersAnnouncedAt": null,
+        "slug": "secondswap-solana-season",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 2,
+            "Submission": 14
+        },
+        "sponsor": {
+            "name": "SecondSwap",
+            "slug": "secondswap",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1743538190/fi8yiqfmdownqbirmitk.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "C++",
+            "Elm",
+            "Data Analytics",
+            "Photography",
+            "Ruby",
+            "Rust"
+        ],
+        "deadline_utc_parsed": "2025-06-30T15:59:46.000Z",
+        "region": "UKRAINE",
+        "publishedAt": "2025-06-30T15:59:46.000Z"
+    },
+    {
+        "id": "80e34ab3-58be-4196-93db-c998c6f2d9cc",
+        "rewardAmount": 500,
+        "deadline": "2025-07-02T00:48:55.000Z",
+        "type": "bounty",
+        "title": "Write a H1 impact for Superteam Vietnam",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "write-a-h1-impact-for-superteam-vietnam",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 0,
+            "Submission": 2
+        },
+        "sponsor": {
+            "name": "Superteam Vietnam",
+            "slug": "superteamvn",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1735886811/htpwcjtol1xluk8r6ngb.png",
+            "isVerified": true,
+            "st": true
+        },
+        "skills": [
+            "Operations",
+            "Redux",
+            "Other"
+        ],
+        "deadline_utc_parsed": "2025-07-02T00:48:55.000Z",
+        "region": "GERMANY",
+        "publishedAt": "2025-07-01T00:48:55.000Z"
+    },
+    {
+        "id": "d971600a-a57c-4c61-91ac-2aa5986ae3f0",
+        "rewardAmount": 320,
+        "deadline": "2025-07-06T08:38:57.000Z",
+        "type": "bounty",
+        "title": "Write a Compelling Post to Encourage Loofta Platform Users",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "write-a-compelling-post-to-encourage-loofta-platform-users",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 4,
+            "Submission": 17
+        },
+        "sponsor": {
+            "name": "loofta",
+            "slug": "loofta",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1749042197/nm2i0b7lhfna36ex8gbx.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "MongoDB",
+            "Product Manager",
+            "Typescript",
+            "Vue",
+            "UI/UX Design"
+        ],
+        "deadline_utc_parsed": "2025-07-06T08:38:57.000Z",
+        "region": "INDIA",
+        "publishedAt": "2025-07-04T08:38:57.000Z"
+    },
+    {
+        "id": "3b622a31-d4bc-4b62-92be-9415fa8846fa",
+        "rewardAmount": 500,
+        "deadline": "2025-07-14T20:34:55.000Z",
+        "type": "bounty",
+        "title": "Brainstorm & Tweet dApp Ideas for the Xandeum Storage Layer",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "possible-with-xandeum",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 1,
+            "Submission": 0
+        },
+        "sponsor": {
+            "name": "Xandeum Labs",
+            "slug": "xandeum",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1746643370/gq6kx8iejlvr3qrfkjbl.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Other",
+            "Social Media",
+            "Svelte",
+            "Java"
+        ],
+        "deadline_utc_parsed": "2025-07-14T20:34:55.000Z",
+        "region": "BALKAN",
+        "publishedAt": "2025-07-12T20:34:55.000Z"
+    },
+    {
+        "id": "f48af639-74a0-4908-b32c-bb4641ce6e60",
+        "rewardAmount": null,
+        "deadline": "2025-07-31T09:26:27.000Z",
+        "type": "project",
+        "title": "3D Reward Suitcases Animation for NOMADZ",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "3d-reward-suitcases-animation-for-nomadz",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "range",
+        "minRewardAsk": 250,
+        "maxRewardAsk": 400,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 3,
+            "Submission": 4
+        },
+        "sponsor": {
+            "name": "Nomadz_co",
+            "slug": "nomadz2456782",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1749115506/mfzie9coqu3epnizgeeg.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Move",
+            "C",
+            "React Native"
+        ],
+        "deadline_utc_parsed": "2025-07-31T09:26:27.000Z",
+        "region": "FRANCE",
+        "publishedAt": "2025-07-30T09:26:27.000Z"
+    },
+    {
+        "id": "c2b21caa-2b17-4b02-8312-9ec1e07ade34",
+        "rewardAmount": 1215,
+        "deadline": "2025-08-31T00:52:45.000Z",
+        "type": "bounty",
+        "title": "Upshot Meme Competition",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "upshot-meme-competition",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 6,
+            "Submission": 3
+        },
+        "sponsor": {
+            "name": "Upshot",
+            "slug": "upshot",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1748569405/mrpdrtzirjlkc4linbn6.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "MySQL",
+            "Pearl",
+            "Ruby",
+            "C++",
+            "C",
+            "Rust"
+        ],
+        "deadline_utc_parsed": "2025-08-31T00:52:45.000Z",
+        "region": "BALKAN",
+        "publishedAt": "2025-08-31T00:52:45.000Z"
+    },
+    {
+        "id": "13f196f6-ed79-4fb1-b850-da2eb40983be",
+        "rewardAmount": 10000,
+        "deadline": "2025-12-31T16:59:37.000Z",
+        "type": "bounty",
+        "title": "AIxBlock Bug Bounty Program",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "aixblock-bug-bounty-program",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 2,
+            "Submission": 12
+        },
+        "sponsor": {
+            "name": "AIxBlock",
+            "slug": "aixblock",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1737013927/wlw6scgq5r1d9bxueg3h.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "C",
+            "Haskell",
+            "Presentation Design"
+        ],
+        "deadline_utc_parsed": "2025-12-31T16:59:37.000Z",
+        "region": "PHILIPPINES",
+        "publishedAt": "2025-12-31T16:59:37.000Z"
+    },
+    {
+        "id": "86edbba0-2823-49e7-bd6a-9ee5d9c4160a",
+        "rewardAmount": 2500,
+        "deadline": "2025-06-15T16:00:06.000Z",
+        "type": "bounty",
+        "title": "AI3 Hackathon 2025 @ London Startup Village",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "ai3-hackathon-2025-london-startup-village",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 5,
+            "Submission": 1
+        },
+        "sponsor": {
+            "name": "Superteam UK",
+            "slug": "Superteam UK",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/earn-sponsors/qzcoaetdwmkal4jliqdt.jpg",
+            "isVerified": true,
+            "st": true
+        },
+        "skills": [
+            "Node.js",
+            "Erlang",
+            "SolidJS"
+        ],
+        "deadline_utc_parsed": "2025-06-15T16:00:06.000Z",
+        "region": "TURKEY",
+        "publishedAt": "2025-06-14T16:00:06.000Z"
+    },
+    {
+        "id": "27e31606-92be-41ba-a733-d3d81f500f70",
+        "rewardAmount": 2000,
+        "deadline": "2025-06-15T20:59:07.000Z",
+        "type": "bounty",
+        "title": "Build your App with AI on Solana: AImpact Beta Challenge",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "aimpact-beta-challenge",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 27,
+            "Submission": 70
+        },
+        "sponsor": {
+            "name": "Kumeka Team",
+            "slug": "@KumekaTeam",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1724392466/earn-sponsor/lb30llj4exe1flqinfyk.png",
+            "isVerified": true,
+            "st": false
+        },
+        "skills": [
+            "Other",
+            "Other",
+            "Product Manager"
+        ],
+        "deadline_utc_parsed": "2025-06-15T20:59:07.000Z",
+        "region": "BRAZIL",
+        "publishedAt": "2025-06-13T20:59:07.000Z"
+    },
+    {
+        "id": "89fc0d52-7474-4a7e-95d2-bb5ded29401e",
+        "rewardAmount": 15000,
+        "deadline": "2025-06-15T21:59:37.000Z",
+        "type": "bounty",
+        "title": "dev.fun World Cup powered by Solana",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "devfun-world-cup-powered-by-solana",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 31,
+            "Submission": 112
+        },
+        "sponsor": {
+            "name": "Dev.fun",
+            "slug": "devfun",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1742820318/fkcfzsvuoqhki1jbyqum.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Kotlin",
+            "Operations",
+            "Elm",
+            "Deno",
+            "Javascript",
+            "Python"
+        ],
+        "deadline_utc_parsed": "2025-06-15T21:59:37.000Z",
+        "region": "ARGENTINA",
+        "publishedAt": "2025-06-15T21:59:37.000Z"
+    },
+    {
+        "id": "60f3c012-7cb2-492e-a18c-ee168539abd2",
+        "rewardAmount": 1000,
+        "deadline": "2025-06-15T23:00:26.000Z",
+        "type": "bounty",
+        "title": "Content Challenge for AI3 Hackathon @ London Startup Village",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "content-challenge-for-ai3-hackathon-london-startup-village",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 0,
+            "Submission": 22
+        },
+        "sponsor": {
+            "name": "Superteam UK",
+            "slug": "Superteam UK",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/earn-sponsors/qzcoaetdwmkal4jliqdt.jpg",
+            "isVerified": true,
+            "st": true
+        },
+        "skills": [
+            "Laravel",
+            "Go",
+            "Ruby on Rails"
+        ],
+        "deadline_utc_parsed": "2025-06-15T23:00:26.000Z",
+        "region": "PHILIPPINES",
+        "publishedAt": "2025-06-14T23:00:26.000Z"
+    },
+    {
+        "id": "d79f0356-7c55-44c1-a05c-fa18e3672e25",
+        "rewardAmount": 1000,
+        "deadline": "2025-06-15T23:25:03.000Z",
+        "type": "bounty",
+        "title": "Develop Telegram Bot for Superteam Earn Notifications",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "telegram-bot-for-earn",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 5,
+            "Submission": 4
+        },
+        "sponsor": {
+            "name": "Superteam",
+            "slug": "superteam",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1713357709/earn-sponsor/lcpnjbldadf03dqojg1j.png",
+            "isVerified": true,
+            "st": true
+        },
+        "skills": [
+            "Flutter",
+            "Other",
+            "C"
+        ],
+        "deadline_utc_parsed": "2025-06-15T23:25:03.000Z",
+        "region": "MEXICO",
+        "publishedAt": "2025-06-13T23:25:03.000Z"
+    },
+    {
+        "id": "6946539a-206c-40e2-ad91-a63815e203d3",
+        "rewardAmount": 1000,
+        "deadline": "2025-06-16T07:00:39.000Z",
+        "type": "bounty",
+        "title": "Create the Best Twitter Thread on Yield Trading Using Asgard",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "trade-yields-on-asgard",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 31,
+            "Submission": 52
+        },
+        "sponsor": {
+            "name": "Asgard Finance",
+            "slug": "asgardfi",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1749110371/csw3wx9x7nko7xguz8eo.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Django",
+            "Java",
+            "Business Development",
+            "Marketing",
+            "Swift"
+        ],
+        "deadline_utc_parsed": "2025-06-16T07:00:39.000Z",
+        "region": "MALAYSIA",
+        "publishedAt": "2025-06-15T07:00:39.000Z"
+    },
+    {
+        "id": "d93d940e-49b7-482b-8cbb-5407e3f637c1",
+        "rewardAmount": 200,
+        "deadline": "2025-06-16T11:00:49.557Z",
+        "type": "project",
+        "title": "Dune Analytics Dashboard Developer for Credible",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "dune-analytics-dashboard-developer-for-credible",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 0,
+            "Submission": 15
+        },
+        "sponsor": {
+            "name": "Credible Finance",
+            "slug": "crediblefinance",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1717155094/earn-sponsor/tzoq3dz8vij5fzz9spia.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Other",
+            "Laravel"
+        ],
+        "deadline_utc_parsed": "2025-06-16T11:00:49.557Z",
+        "region": "PHILIPPINES",
+        "publishedAt": "2025-06-14T11:00:49.557Z"
+    },
+    {
+        "id": "b9a8fe38-7b96-492d-9bfa-0dae53f56477",
+        "rewardAmount": 600,
+        "deadline": "2025-06-17T09:00:33.139Z",
+        "type": "bounty",
+        "title": "Sanctum is Hiring a Pixel Wizard! 🧙☁️",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "sanctum-is-hiring-a-pixel-wizard-sf",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 2,
+            "Submission": 9
+        },
+        "sponsor": {
+            "name": "Sanctum",
+            "slug": "sanctum",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1717735691/earn-sponsor/zcfcjd8xetrvevrgx6pv.png",
+            "isVerified": true,
+            "st": false
+        },
+        "skills": [
+            "Other",
+            "Other",
+            "Angular",
+            "iOS",
+            "Rust"
+        ],
+        "deadline_utc_parsed": "2025-06-17T09:00:33.139Z",
+        "region": "GLOBAL",
+        "publishedAt": "2025-06-16T09:00:33.139Z"
+    },
+    {
+        "id": "bacd7dd4-e6e7-4625-ae7a-adb57d3e3f28",
+        "rewardAmount": 100,
+        "deadline": "2025-06-17T21:11:32.927Z",
+        "type": "bounty",
+        "title": "Write a Thread about V* by Bad Environment Club",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "write-a-thread-about-v-by-bad-environment-club",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 14,
+            "Submission": 19
+        },
+        "sponsor": {
+            "name": "Bad Environment Club",
+            "slug": "bad-environment-club",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1748976171/juehqktivguvhusmcsud.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Ruby on Rails",
+            "Operations"
+        ],
+        "deadline_utc_parsed": "2025-06-17T21:11:32.927Z",
+        "region": "SPAIN",
+        "publishedAt": "2025-06-15T21:11:32.927Z"
+    },
+    {
+        "id": "7871a4cf-d99f-4f30-bd76-65cf39346cd4",
+        "rewardAmount": 500,
+        "deadline": "2025-06-17T21:59:42.000Z",
+        "type": "bounty",
+        "title": "Write a Twitter thread",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "klonborgpad",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 22,
+            "Submission": 59
+        },
+        "sponsor": {
+            "name": "Borgpad",
+            "slug": "borgpad",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1738686845/km851z3b69e87xpyizrz.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Business Development",
+            "Node.js",
+            "Go",
+            "Illustration"
+        ],
+        "deadline_utc_parsed": "2025-06-17T21:59:42.000Z",
+        "region": "UAE",
+        "publishedAt": "2025-06-15T21:59:42.000Z"
+    },
+    {
+        "id": "fb1343d4-3e1f-4d48-9696-b034f2376399",
+        "rewardAmount": 20000,
+        "deadline": "2025-06-18T10:25:59.000Z",
+        "type": "bounty",
+        "title": "Write a Twitter Thread Promoting Solana App Kit",
+        "token": "SEND",
+        "winnersAnnouncedAt": null,
+        "slug": "write-a-banger-twitter-thread-promoting-solana-app-kit",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 33,
+            "Submission": 45
+        },
+        "sponsor": {
+            "name": "thesendcoin",
+            "slug": "thesendintern",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1739275179/eir32u7hbrhee79kyuoa.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "PHP",
+            "Go",
+            "Presentation Design"
+        ],
+        "deadline_utc_parsed": "2025-06-18T10:25:59.000Z",
+        "region": "NIGERIA",
+        "publishedAt": "2025-06-16T10:25:59.000Z"
+    },
+    {
+        "id": "76afa4dd-43b2-4d94-9dcf-5c519fcc7fef",
+        "rewardAmount": null,
+        "deadline": "2025-06-18T14:46:23.530Z",
+        "type": "project",
+        "title": "Community Manager for Stealth Gamified Trading Platform",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "community-manager-for-stealth-gamified-trading-platform",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "variable",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 7,
+            "Submission": 34
+        },
+        "sponsor": {
+            "name": "Blue7",
+            "slug": "Blue7",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/earn-sponsors/fiucggqv7ymfyrjmcv8w.jpg",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Video",
+            "Other",
+            "Game Design"
+        ],
+        "deadline_utc_parsed": "2025-06-18T14:46:23.530Z",
+        "region": "MALAYSIA",
+        "publishedAt": "2025-06-18T14:46:23.530Z"
+    },
+    {
+        "id": "759dc10c-9581-4893-b2b0-f453fc8998ba",
+        "rewardAmount": 300,
+        "deadline": "2025-06-18T22:00:13.000Z",
+        "type": "bounty",
+        "title": "Balkan Students Content Competition",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "balkan-student-content-competition",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 0,
+            "Submission": 2
+        },
+        "sponsor": {
+            "name": "Bitget",
+            "slug": "bitget",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1737888459/bcsxxtptljpmju4eytwh.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Redux",
+            "React",
+            "Social Media",
+            "Svelte"
+        ],
+        "deadline_utc_parsed": "2025-06-18T22:00:13.000Z",
+        "region": "BRAZIL",
+        "publishedAt": "2025-06-17T22:00:13.000Z"
+    },
+    {
+        "id": "1fa39994-9ce1-4f1a-a745-e1e3905299ef",
+        "rewardAmount": 150,
+        "deadline": "2025-06-19T12:28:49.000Z",
+        "type": "project",
+        "title": "Calling ALL Solana hodlers & meme coiners (Noobs to Pro Trenchers) 🚀",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "calling-all-solana-hodlers-and-meme-coiners-noobs-to-pro-trenchers",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 80,
+            "Submission": 284
+        },
+        "sponsor": {
+            "name": "Solana Wallet Tracker",
+            "slug": "solanawallettracker",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1743765704/n3djzmiar1whzdbnvyqq.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Angular",
+            "Other",
+            "React",
+            "Erlang",
+            "Pearl",
+            "Node.js"
+        ],
+        "deadline_utc_parsed": "2025-06-19T12:28:49.000Z",
+        "region": "IRELAND",
+        "publishedAt": "2025-06-17T12:28:49.000Z"
+    },
+    {
+        "id": "8ff4860b-d00f-4cca-836c-b0228592c4e3",
+        "rewardAmount": 1000,
+        "deadline": "2025-06-20T06:59:40.000Z",
+        "type": "bounty",
+        "title": "Write a Twitter thread about Global Dollar Network",
+        "token": "USDG",
+        "winnersAnnouncedAt": null,
+        "slug": "write-a-twitter-thread-about-global-dollar-network",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 12,
+            "Submission": 22
+        },
+        "sponsor": {
+            "name": "Global Dollar Network",
+            "slug": "global-dollar-network",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1742879378/v9mlyq0zb2yad3mjvh2i.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Presentation Design",
+            "MySQL",
+            "Video Editing",
+            "MongoDB",
+            "Social Media"
+        ],
+        "deadline_utc_parsed": "2025-06-20T06:59:40.000Z",
+        "region": "SPAIN",
+        "publishedAt": "2025-06-20T06:59:40.000Z"
+    },
+    {
+        "id": "1410bb0c-56b5-408c-a0be-487102de7960",
+        "rewardAmount": 350,
+        "deadline": "2025-06-20T10:34:30.000Z",
+        "type": "bounty",
+        "title": "🎬 \"THE FUTURE OF FINANCE\" TEASER VIDEO",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "the-future-of-finance-teaser-video",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 77,
+            "Submission": 82
+        },
+        "sponsor": {
+            "name": "Globachain",
+            "slug": "globachain",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1732083707/c59sxgffd6bb8jj0ccem.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Video Editing",
+            "Python",
+            "MySQL",
+            "ASP.NET",
+            "Scala",
+            "Java"
+        ],
+        "deadline_utc_parsed": "2025-06-20T10:34:30.000Z",
+        "region": "USA",
+        "publishedAt": "2025-06-19T10:34:30.000Z"
+    },
+    {
+        "id": "72640acb-02ae-41a4-bdc1-d7a918bafff8",
+        "rewardAmount": 105,
+        "deadline": "2025-06-20T19:21:59.000Z",
+        "type": "bounty",
+        "title": "Write a Twitter thread about Sorcerer Extension",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "write-a-twitter-thread-about-sorcerer-extension",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 5,
+            "Submission": 7
+        },
+        "sponsor": {
+            "name": "Sorcerer",
+            "slug": "sorcerer",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1738158690/wfnm951uwdriwvfcroy7.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Social Media",
+            "Pearl"
+        ],
+        "deadline_utc_parsed": "2025-06-20T19:21:59.000Z",
+        "region": "INDIA",
+        "publishedAt": "2025-06-18T19:21:59.000Z"
+    },
+    {
+        "id": "a085ae72-fdff-4697-8574-0c6b8e4e2279",
+        "rewardAmount": 200,
+        "deadline": "2025-06-20T20:30:11.140Z",
+        "type": "bounty",
+        "title": "Frontrun.pro X & Reddit Power-Poster Contest — Drive Beta Sign-Ups, Grab USDC",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "frontrunpro-x-and-reddit-power-poster-contest-drive-beta-sign-ups-grab-usdc",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 0,
+            "Submission": 4
+        },
+        "sponsor": {
+            "name": "Frontrun.pro",
+            "slug": "frontrunpro",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1749237985/dxackt3lo1f3yn4dkyhl.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "C",
+            "Ruby on Rails"
+        ],
+        "deadline_utc_parsed": "2025-06-20T20:30:11.140Z",
+        "region": "FRANCE",
+        "publishedAt": "2025-06-19T20:30:11.140Z"
+    },
+    {
+        "id": "a24e1aec-86e7-47f9-9b6a-575627afed53",
+        "rewardAmount": null,
+        "deadline": "2025-06-20T22:41:22.758Z",
+        "type": "project",
+        "title": "💲Hiring researcher for crypto documentary videos",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "hiring-researcher-for-crypto-documentary-videos",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "range",
+        "minRewardAsk": 500,
+        "maxRewardAsk": 1500,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 0,
+            "Submission": 11
+        },
+        "sponsor": {
+            "name": "Cryptowood",
+            "slug": "cryptowood",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1748691304/neydklfry2ak47k9fqfq.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Laravel",
+            "Other",
+            "Operations",
+            "Elixir",
+            "MySQL"
+        ],
+        "deadline_utc_parsed": "2025-06-20T22:41:22.758Z",
+        "region": "MALAYSIA",
+        "publishedAt": "2025-06-20T22:41:22.758Z"
+    },
+    {
+        "id": "7d47c4e0-8732-449c-bd1d-a6206db694fa",
+        "rewardAmount": 250,
+        "deadline": "2025-06-21T10:00:24.000Z",
+        "type": "bounty",
+        "title": "Write a Twitter Thread Sanafi Ethical Flywheel (SEF)",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "write-a-twitter-thread-sanafi-ethical-flywheel-sef",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 6,
+            "Submission": 9
+        },
+        "sponsor": {
+            "name": "Sanafi Onchain",
+            "slug": "sanafionchain",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1749809230/wmatsknkxxtiffpc9o1r.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "SolidJS",
+            "Redux",
+            "Pearl",
+            "Data Analytics",
+            "Rust"
+        ],
+        "deadline_utc_parsed": "2025-06-21T10:00:24.000Z",
+        "region": "ISRAEL",
+        "publishedAt": "2025-06-19T10:00:24.000Z"
+    },
+    {
+        "id": "91275810-efa8-4712-94b4-3e4ca0aa8d6b",
+        "rewardAmount": 300,
+        "deadline": "2025-06-22T00:00:36.000Z",
+        "type": "bounty",
+        "title": "Provide LastMint Play Test Feedback",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "lastmint-playtest-feedback",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 0,
+            "Submission": 0
+        },
+        "sponsor": {
+            "name": "LastMint",
+            "slug": "lastmint",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1749674415/xncbqlh27jv1xfvbnbdo.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "C++",
+            "React Native",
+            "Illustration",
+            "Community Manager",
+            "Game Design"
+        ],
+        "deadline_utc_parsed": "2025-06-22T00:00:36.000Z",
+        "region": "SINGAPORE",
+        "publishedAt": "2025-06-22T00:00:36.000Z"
+    },
+    {
+        "id": "9cf2d0bb-ac4d-4b09-9386-8034938b3594",
+        "rewardAmount": null,
+        "deadline": "2025-06-23T06:51:46.572Z",
+        "type": "project",
+        "title": "Solana Mobile Developer Intern for HeySolana",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "solana-mobile-developer-intern-for-heysolana",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "range",
+        "minRewardAsk": 200,
+        "maxRewardAsk": 500,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 8,
+            "Submission": 42
+        },
+        "sponsor": {
+            "name": "Hey Solana",
+            "slug": "yrayheysolana",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1747594578/rolsk9yt4agyei5pgxc1.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Vue",
+            "Other",
+            "Django",
+            "Product Feedback"
+        ],
+        "deadline_utc_parsed": "2025-06-23T06:51:46.572Z",
+        "region": "GLOBAL",
+        "publishedAt": "2025-06-22T06:51:46.572Z"
+    },
+    {
+        "id": "d70976a9-554a-4e29-9769-5016376e2509",
+        "rewardAmount": 1,
+        "deadline": "2025-06-24T10:00:25.000Z",
+        "type": "bounty",
+        "title": "EthCC 2025 is calling!",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "ethcc-2025-is-calling",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 2,
+            "Submission": 1
+        },
+        "sponsor": {
+            "name": "Neon EVM",
+            "slug": "Neon_EVM",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1715082967/earn-sponsor/lqxv4jzq4og6xwp68aum.png",
+            "isVerified": true,
+            "st": false
+        },
+        "skills": [
+            "Node.js",
+            "Video",
+            "Discord Moderator",
+            "PHP"
+        ],
+        "deadline_utc_parsed": "2025-06-24T10:00:25.000Z",
+        "region": "GLOBAL",
+        "publishedAt": "2025-06-22T10:00:25.000Z"
+    },
+    {
+        "id": "49135b77-4c1d-4944-a737-129efd7b9d2d",
+        "rewardAmount": 1600,
+        "deadline": "2025-06-25T12:02:56.000Z",
+        "type": "bounty",
+        "title": "Deep Dive: Competitive analysis of token launchpads on Solana",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "deep-dive-competitive-analysis-of-token-launchpads-on-solana",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 0,
+            "Submission": 1
+        },
+        "sponsor": {
+            "name": "MetaDAO",
+            "slug": "themetadaoproject",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/earn-sponsors/bunr1pfhpni7br0ff2ec.jpg",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Laravel"
+        ],
+        "deadline_utc_parsed": "2025-06-25T12:02:56.000Z",
+        "region": "FRANCE",
+        "publishedAt": "2025-06-25T12:02:56.000Z"
+    },
+    {
+        "id": "59769d59-1e58-4965-92e2-bfa034a22680",
+        "rewardAmount": 1750,
+        "deadline": "2025-06-25T18:10:55.505Z",
+        "type": "bounty",
+        "title": "$ME Staking Rewards - Video Bounty",
+        "token": "ME",
+        "winnersAnnouncedAt": null,
+        "slug": "magic-eden-staking-rewards",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 1,
+            "Submission": 4
+        },
+        "sponsor": {
+            "name": "Magic Eden",
+            "slug": "magic-eden",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1679901436/earn-sponsors/recmK6Ynz8HMpa5Wk.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Java",
+            "Svelte",
+            "Other",
+            "SolidJS",
+            "Node.js",
+            "Social Media"
+        ],
+        "deadline_utc_parsed": "2025-06-25T18:10:55.505Z",
+        "region": "ISRAEL",
+        "publishedAt": "2025-06-25T18:10:55.505Z"
+    },
+    {
+        "id": "beb3d206-8733-4a66-b8ea-ad0e327af752",
+        "rewardAmount": 300,
+        "deadline": "2025-06-25T20:36:49.984Z",
+        "type": "bounty",
+        "title": "Write a Twitter Thread on Owners Club Experience",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "write-a-twitter-thread-on-owners-club-experience",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 5,
+            "Submission": 8
+        },
+        "sponsor": {
+            "name": "Owners Club ",
+            "slug": "ownersclub",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1748987652/qnpotvfmuoo6g8zkh9xs.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "React",
+            "MySQL"
+        ],
+        "deadline_utc_parsed": "2025-06-25T20:36:49.984Z",
+        "region": "GLOBAL",
+        "publishedAt": "2025-06-25T20:36:49.984Z"
+    },
+    {
+        "id": "8701c9bb-29af-4a0e-8734-48134f76e222",
+        "rewardAmount": null,
+        "deadline": "2025-06-25T23:05:27.741Z",
+        "type": "project",
+        "title": "🚨Hiring animated short-form video editor (Montage/Story editing)",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "short-form-animated-movie-editor-music-meets-motion",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "range",
+        "minRewardAsk": 500,
+        "maxRewardAsk": 2500,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 2,
+            "Submission": 19
+        },
+        "sponsor": {
+            "name": "Cryptowood",
+            "slug": "cryptowood",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1748691304/neydklfry2ak47k9fqfq.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Pearl",
+            "MySQL",
+            "Presentation Design"
+        ],
+        "deadline_utc_parsed": "2025-06-25T23:05:27.741Z",
+        "region": "JAPAN",
+        "publishedAt": "2025-06-25T23:05:27.741Z"
+    },
+    {
+        "id": "de1c0adb-9de5-467e-86e2-69f5f9c94197",
+        "rewardAmount": 300,
+        "deadline": "2025-06-26T00:00:45.000Z",
+        "type": "bounty",
+        "title": "Create a 90-Second Hype Video for LastMint Launch",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "video-for-lastmint-launch",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 0,
+            "Submission": 0
+        },
+        "sponsor": {
+            "name": "LastMint",
+            "slug": "lastmint",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1749674415/xncbqlh27jv1xfvbnbdo.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Marketing",
+            "Rust",
+            "Android",
+            "Django"
+        ],
+        "deadline_utc_parsed": "2025-06-26T00:00:45.000Z",
+        "region": "NIGERIA",
+        "publishedAt": "2025-06-26T00:00:45.000Z"
+    },
+    {
+        "id": "bf7fefa0-b5c3-4cfe-bb51-2c776877b0a3",
+        "rewardAmount": 150,
+        "deadline": "2025-06-27T12:48:58.000Z",
+        "type": "bounty",
+        "title": "Make a comic showing travel pain & BukProtocol’s solution using its brand theme.",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "make-a-comic-showing-travel-pain-and-bukprotocols-solution-using-its-brand-theme",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 9,
+            "Submission": 10
+        },
+        "sponsor": {
+            "name": "BukProtocol",
+            "slug": "bukprotocol",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1740043939/fl6vqlqpndfnxe2fztbk.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Elixir",
+            "Discord Moderator",
+            "Other",
+            "Laravel",
+            "Pearl"
+        ],
+        "deadline_utc_parsed": "2025-06-27T12:48:58.000Z",
+        "region": "IRELAND",
+        "publishedAt": "2025-06-26T12:48:58.000Z"
+    },
+    {
+        "id": "65cfca17-c12a-4098-88d1-4de26dc29af4",
+        "rewardAmount": 1500,
+        "deadline": "2025-06-27T16:59:48.000Z",
+        "type": "bounty",
+        "title": "Tokenizing Web2 Marketplaces in SEA",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "tokenizing-web2-marketplaces-in-sea",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 15,
+            "Submission": 38
+        },
+        "sponsor": {
+            "name": "Superteam Vietnam",
+            "slug": "superteamvn",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1735886811/htpwcjtol1xluk8r6ngb.png",
+            "isVerified": true,
+            "st": true
+        },
+        "skills": [
+            "Writing",
+            "Move",
+            "Presentation Design",
+            "Ruby",
+            "Other"
+        ],
+        "deadline_utc_parsed": "2025-06-27T16:59:48.000Z",
+        "region": "NIGERIA",
+        "publishedAt": "2025-06-26T16:59:48.000Z"
+    },
+    {
+        "id": "3ed088f2-e555-408e-bb6e-b776ea12e4e9",
+        "rewardAmount": 1500,
+        "deadline": "2025-06-29T17:59:43.000Z",
+        "type": "bounty",
+        "title": "Web3 M&A Report 2024–2025 (Solana Focus)",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "web3-manda-report-2024-2025-solana-focus",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 0,
+            "Submission": 1
+        },
+        "sponsor": {
+            "name": "Superteam Vietnam",
+            "slug": "superteamvn",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1735886811/htpwcjtol1xluk8r6ngb.png",
+            "isVerified": true,
+            "st": true
+        },
+        "skills": [
+            "Ruby on Rails",
+            "Flutter",
+            "Product Feedback",
+            "PHP"
+        ],
+        "deadline_utc_parsed": "2025-06-29T17:59:43.000Z",
+        "region": "VIETNAM",
+        "publishedAt": "2025-06-28T17:59:43.000Z"
+    },
+    {
+        "id": "9f9cc5be-832c-43fe-ba1f-cd76ceb9d827",
+        "rewardAmount": 500,
+        "deadline": "2025-06-30T07:29:15.000Z",
+        "type": "bounty",
+        "title": "Solana Spotlight: Bringing Web3 to Everyday Nepalis",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "solana-spotlight-bringing-crypto-to-everyday-nepalis",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 0,
+            "Submission": 0
+        },
+        "sponsor": {
+            "name": "Superteam Nepal",
+            "slug": "superteamnp",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1743757798/q1mv5sk40sjzju2gdvur.png",
+            "isVerified": false,
+            "st": true
+        },
+        "skills": [
+            "ASP.NET"
+        ],
+        "deadline_utc_parsed": "2025-06-30T07:29:15.000Z",
+        "region": "MEXICO",
+        "publishedAt": "2025-06-28T07:29:15.000Z"
+    },
+    {
+        "id": "0817a1b9-73dc-4f53-aa3d-a7d68c688d95",
+        "rewardAmount": 1000,
+        "deadline": "2025-06-30T12:00:43.000Z",
+        "type": "bounty",
+        "title": "Toby Network Content War - 1,000 USDC & █████ 🦦",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "toby-content-war",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 18,
+            "Submission": 33
+        },
+        "sponsor": {
+            "name": "Toby Network",
+            "slug": "toby",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1723042426/earn-sponsor/hu7ao65no9y7pjqzhjff.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "UI/UX Design",
+            "Ruby",
+            "Laravel",
+            "MongoDB",
+            "Javascript"
+        ],
+        "deadline_utc_parsed": "2025-06-30T12:00:43.000Z",
+        "region": "UK",
+        "publishedAt": "2025-06-28T12:00:43.000Z"
+    },
+    {
+        "id": "df5c723e-ad60-440b-a70d-98d973aafd17",
+        "rewardAmount": 1000,
+        "deadline": "2025-06-30T15:59:46.000Z",
+        "type": "bounty",
+        "title": "Create A Video, Memes, or a Twitter Thread for SecondSwap",
+        "token": "USDT",
+        "winnersAnnouncedAt": null,
+        "slug": "secondswap-solana-season",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 2,
+            "Submission": 16
+        },
+        "sponsor": {
+            "name": "SecondSwap",
+            "slug": "secondswap",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1743538190/fi8yiqfmdownqbirmitk.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "iOS",
+            "Python"
+        ],
+        "deadline_utc_parsed": "2025-06-30T15:59:46.000Z",
+        "region": "USA",
+        "publishedAt": "2025-06-29T15:59:46.000Z"
+    },
+    {
+        "id": "80e34ab3-58be-4196-93db-c998c6f2d9cc",
+        "rewardAmount": 500,
+        "deadline": "2025-07-02T00:48:55.000Z",
+        "type": "bounty",
+        "title": "Write a H1 impact for Superteam Vietnam",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "write-a-h1-impact-for-superteam-vietnam",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 0,
+            "Submission": 2
+        },
+        "sponsor": {
+            "name": "Superteam Vietnam",
+            "slug": "superteamvn",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1735886811/htpwcjtol1xluk8r6ngb.png",
+            "isVerified": true,
+            "st": true
+        },
+        "skills": [
+            "Svelte",
+            "Java"
+        ],
+        "deadline_utc_parsed": "2025-07-02T00:48:55.000Z",
+        "region": "INDIA",
+        "publishedAt": "2025-06-30T00:48:55.000Z"
+    },
+    {
+        "id": "d971600a-a57c-4c61-91ac-2aa5986ae3f0",
+        "rewardAmount": 320,
+        "deadline": "2025-07-06T08:38:57.000Z",
+        "type": "bounty",
+        "title": "Write a Compelling Post to Encourage Loofta Platform Users",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "write-a-compelling-post-to-encourage-loofta-platform-users",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 4,
+            "Submission": 18
+        },
+        "sponsor": {
+            "name": "loofta",
+            "slug": "loofta",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1749042197/nm2i0b7lhfna36ex8gbx.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Svelte",
+            "Move",
+            "Video Editing",
+            "Digital Marketing"
+        ],
+        "deadline_utc_parsed": "2025-07-06T08:38:57.000Z",
+        "region": "JAPAN",
+        "publishedAt": "2025-07-06T08:38:57.000Z"
+    },
+    {
+        "id": "3b622a31-d4bc-4b62-92be-9415fa8846fa",
+        "rewardAmount": 500,
+        "deadline": "2025-07-14T20:34:55.000Z",
+        "type": "bounty",
+        "title": "Brainstorm & Tweet dApp Ideas for the Xandeum Storage Layer",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "possible-with-xandeum",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 2,
+            "Submission": 4
+        },
+        "sponsor": {
+            "name": "Xandeum Labs",
+            "slug": "xandeum",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1746643370/gq6kx8iejlvr3qrfkjbl.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Erlang",
+            "Other"
+        ],
+        "deadline_utc_parsed": "2025-07-14T20:34:55.000Z",
+        "region": "VIETNAM",
+        "publishedAt": "2025-07-12T20:34:55.000Z"
+    },
+    {
+        "id": "f48af639-74a0-4908-b32c-bb4641ce6e60",
+        "rewardAmount": null,
+        "deadline": "2025-07-31T09:26:27.000Z",
+        "type": "project",
+        "title": "3D Reward Suitcases Animation for NOMADZ",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "3d-reward-suitcases-animation-for-nomadz",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "range",
+        "minRewardAsk": 250,
+        "maxRewardAsk": 400,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 3,
+            "Submission": 4
+        },
+        "sponsor": {
+            "name": "Nomadz_co",
+            "slug": "nomadz2456782",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1749115506/mfzie9coqu3epnizgeeg.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Photography",
+            "Android"
+        ],
+        "deadline_utc_parsed": "2025-07-31T09:26:27.000Z",
+        "region": "NIGERIA",
+        "publishedAt": "2025-07-31T09:26:27.000Z"
+    },
+    {
+        "id": "c2b21caa-2b17-4b02-8312-9ec1e07ade34",
+        "rewardAmount": 1215,
+        "deadline": "2025-08-31T00:52:45.000Z",
+        "type": "bounty",
+        "title": "Upshot Meme Competition",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "upshot-meme-competition",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 7,
+            "Submission": 3
+        },
+        "sponsor": {
+            "name": "Upshot",
+            "slug": "upshot",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1748569405/mrpdrtzirjlkc4linbn6.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Go",
+            "Ruby",
+            "Angular"
+        ],
+        "deadline_utc_parsed": "2025-08-31T00:52:45.000Z",
+        "region": "NIGERIA",
+        "publishedAt": "2025-08-31T00:52:45.000Z"
+    },
+    {
+        "id": "13f196f6-ed79-4fb1-b850-da2eb40983be",
+        "rewardAmount": 10000,
+        "deadline": "2025-12-31T16:59:37.000Z",
+        "type": "bounty",
+        "title": "AIxBlock Bug Bounty Program",
+        "token": "USDC",
+        "winnersAnnouncedAt": null,
+        "slug": "aixblock-bug-bounty-program",
+        "isWinnersAnnounced": false,
+        "isFeatured": false,
+        "compensationType": "fixed",
+        "minRewardAsk": null,
+        "maxRewardAsk": null,
+        "status": "OPEN",
+        "_count": {
+            "Comments": 2,
+            "Submission": 14
+        },
+        "sponsor": {
+            "name": "AIxBlock",
+            "slug": "aixblock",
+            "logo": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1737013927/wlw6scgq5r1d9bxueg3h.png",
+            "isVerified": false,
+            "st": false
+        },
+        "skills": [
+            "Discord Moderator",
+            "Erlang",
+            "Community Manager",
+            "Solidity"
+        ],
+        "deadline_utc_parsed": "2025-12-31T16:59:37.000Z",
+        "region": "BRAZIL",
+        "publishedAt": "2025-12-29T16:59:37.000Z"
+    }
+]
