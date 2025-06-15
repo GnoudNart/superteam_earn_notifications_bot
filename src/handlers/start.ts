@@ -93,7 +93,7 @@ const sendNotification = (ctx: MyContext, notificationData: NotificationData) =>
     `*⚡️                                        ⭐️${wrapperMarkdown(` New ${notificationData.type.toUpperCase()}`)}⭐️                                        ⚡️*
     __*🔥 ${wrapperMarkdown(notificationData.title)} 🔥*__                                          
 
-    *🌟 Sponsor*: ${wrapperMarkdown(notificationData.sponsor.name)}\\.
+    *🌟 Sponsor*: ${wrapperMarkdown(notificationData.sponsorName)}\\.
     *🎁 Reward Token*: ${wrapperMarkdown(rewardToken)}\\.
     *💲 USD value*: ${wrapperMarkdown(usdValue)}\\.
     *🎯 Skills*: ${wrapperMarkdown(notificationData.skills.join(", "))}\\.
