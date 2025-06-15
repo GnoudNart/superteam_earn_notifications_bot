@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
-// const { webhookHandler } = require('../src/bot');
+import { webhookHandler } from '../src/bot';
 
 // Create application/x-www-form-urlencoded parser
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -18,10 +18,10 @@ app.get('/', (req, res) => {
 });
 
 
-const webhookHandler = (req, res) => {
-  console.log('Webhook received!', req.body);
-  res.status(200).send('OK'); // Telegram expects a 200 OK
-};
+// const webhookHandler = (req, res) => {
+//   console.log('Webhook received!', req.body);
+//   res.status(200).send('OK'); // Telegram expects a 200 OK
+// };
 
 // Handle webhook updates from Telegram
 app.post('/webhook', webhookHandler);
