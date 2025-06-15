@@ -57,6 +57,14 @@ export const replyStart = (ctx: MyContext, isEdit: boolean = false) => {
 
 // register command
 composer.command('start', (ctx) => {
+    let payload = ctx.match;
+    if (payload.length) {
+      const url = Buffer.from(payload, 'base64').toString();
+      const params = Object.fromEntries(new URLSearchParams(url).entries());
+      if (params.location) {
+        ctx.session.location = params.location;
+      }
+    }
     replyStart(ctx);
 });
 
