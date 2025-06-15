@@ -1,17 +1,8 @@
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
+import { User } from './types'
 
-interface User {
-  id: string;
-  name: string;
-  email: string;
-  telegramId: bigint;
-  chatId: bigint; // Using bigint for chatId
-  isEnableNoti: boolean;
-  createdAt: Date;
-  updatedAt: Date;
-}
 
 
 export async function getUserIdsFromDatabase(): Promise<number[]> {
@@ -33,6 +24,42 @@ export async function getUserIdsFromDatabase(): Promise<number[]> {
     // Không đóng kết nối ở đây nếu hàm này được gọi thường xuyên (ví dụ trong mỗi request)
     // Prisma Client quản lý kết nối hiệu quả.
     // await prisma.$disconnect(); // Chỉ đóng khi ứng dụng tắt hẳn
+  }
+}
+
+export async function getFilteredSessionsMap(): Promise<Map<string, SessionData>> {
+  try {
+    // Fetch all sessions from the database
+    const sessions = await prisma.session.findMany({
+      select: {
+        key: true,
+        value: true,
+      },
+    });
+
+    // Create a Map to store key -> SessionData
+    const sessionMap = new Map<string, SessionData>();
+
+    // Iterate through sessions, parse value, and filter
+    for (const session of sessions) {
+      try {
+        // Parse the value string to SessionData object
+        const sessionData: SessionData = JSON.parse(session.value);
+
+        // Check if session meets filter criteria
+        if (sessionData.hasSet === true && sessionData.isEnableNoti === true) {
+          sessionMap.set(session.key, sessionData);
+        }
+      } catch (parseError) {
+        console.error(`Error parsing session value for key ${session.key}:`, parseError);
+        continue; // Skip invalid sessions
+      }
+    }
+
+    return sessionMap;
+  } catch (error) {
+    console.error('Error fetching sessions from database:', error);
+    throw error;
   }
 }
 

@@ -16,6 +16,7 @@ import help from "./handlers/help";
 import bounty from "./handlers/bounty";
 import skills from "./handlers/skills";
 import valueUSD from "./handlers/valueUSD";
+import { SessionData } from './types'
 
 dotenv.config();
 
@@ -23,18 +24,6 @@ export const prisma = new PrismaClient();
 
 const socksAgent = process.env.USE_PROXY ? new SocksProxyAgent(process.env.PROXY_HOST!) : undefined;
 
-// Define the SessionData structure.
-interface SessionData {
-    activeMessageId: number;
-    minValue: number;
-    maxValue: number;
-    isBounties: boolean;
-    isProjects: boolean;
-    skills: string[];
-    location: string;
-    hasSet: boolean;
-    isEnableNoti: boolean;
-}
 
 
 export type MyContext = Context & SessionFlavor<SessionData> & ConversationFlavor<Context>;
