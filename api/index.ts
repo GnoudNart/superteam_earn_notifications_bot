@@ -83,41 +83,82 @@ app.get('/crud_fake_user_for_test', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'components', 'crud_fake_user_for_test.htm'));
 });
 
-
-app.get('/api/users', async (req, res) => {
-    try {
-        const users = await prisma.user.findMany(); // Giả sử bạn có model 'User' trong Prisma schema của mình
-        res.status(200).json(users);
-    } catch (error) {
-        console.error('Error fetching users:', error);
-        res.status(500).json({ status: 'error', message: 'Failed to fetch users from database.' });
+function bigIntToString(obj) {
+    // If the object itself is a BigInt, convert it directly
+    if (typeof obj === 'bigint') {
+        return obj.toString();
     }
-});
+    // If it's not an object or is null, return as is
+    if (typeof obj !== 'object' || obj === null) {
+        return obj;
+    }
 
-// Thêm các API endpoint cho CRUD operations (sẽ cần cho bước sau)
-// POST: Tạo người dùng mới
+    // If it's an array, map over its elements
+    if (Array.isArray(obj)) {
+        return obj.map(bigIntToString);
+    }
+
+    // If it's a plain object, iterate over its properties
+    const newObj = {};
+    for (const key in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, key)) {
+            newObj[key] = bigIntToString(obj[key]);
+        }
+    }
+    return newObj;
+}
+
+// POST /api/users endpoint for creating a new user
 app.post('/api/users', async (req, res) => {
     try {
-        // Lấy thêm chatId từ body
+        // Get name, email, telegramId, and chatId from the request body
         const { name, email, telegramId, chatId } = req.body;
-        if (!name || !email || !telegramId || !chatId) { // Kiểm tra tất cả các trường bắt buộc
+
+        // Validate that all required fields are present
+        if (!name || !email || !telegramId || !chatId) {
             return res.status(400).json({ message: 'Name, email, telegramId, and chatId are required.' });
         }
+
+        // Create a new user in the database using Prisma
+        // Ensure telegramId and chatId are parsed to integers,
+        // matching the expected type in your Prisma schema (e.g., BigInt in DB).
         const newUser = await prisma.user.create({
             data: {
                 name,
                 email,
-                telegramId: parseInt(telegramId),
-                chatId: parseInt(chatId) // <-- Truyền chatId vào đây
+                telegramId: parseInt(telegramId, 10), // Ensure base 10 for parseInt
+                chatId: parseInt(chatId, 10)         // Ensure base 10 for parseInt
             },
         });
-        res.status(201).json(newUser);
+
+        // Convert any BigInt values in the newUser object to strings before sending the response
+        const serializableUser = bigIntToString(newUser);
+
+        res.status(201).json(serializableUser);
     } catch (error) {
         console.error('Error creating user:', error);
         if (error.code === 'P2002') {
+            // P2002 is Prisma's error code for unique constraint violation
             return res.status(409).json({ status: 'error', message: 'Email, Telegram ID or Chat ID already exists.' });
         }
         res.status(500).json({ status: 'error', message: 'Failed to create user.' });
+    }
+});
+
+// GET /api/users endpoint for fetching all users
+app.get('/api/users', async (req, res) => {
+    try {
+        // Fetch all users from the database using Prisma
+        const users = await prisma.user.findMany();
+
+        // Convert any BigInt values in the fetched users array to strings
+        // This ensures the JSON response can be properly serialized.
+        const serializableUsers = bigIntToString(users);
+
+        res.status(200).json(serializableUsers);
+    } catch (error) {
+        console.error('Error fetching users:', error);
+        res.status(500).json({ status: 'error', message: 'Failed to fetch users.' });
     }
 });
 
