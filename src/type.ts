@@ -21,9 +21,11 @@ export interface SessionData {
   isEnableNoti: boolean;
 }
 
-interface Notification {
+
+
+export interface Notification {
   id: string;
-  rewardAmount: number;
+  rewardAmount: number | null;
   deadline: string;
   type: string;
   title: string;

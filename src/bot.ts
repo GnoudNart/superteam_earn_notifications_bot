@@ -110,10 +110,12 @@ bot.api.setMyCommands([
 ]);
 
 // Start the bot.
-// console.log("Starting the bot...")
-// bot.start()
-//     .then(() => console.log("Bot is running..."))
-//     .catch((err) => console.error("Failed to launch bot:", err));
-//
+console.log("Starting the bot...")
+bot.start()
+    .then(() => console.log("Bot is running..."))
+    .catch((err) => console.error("Failed to launch bot:", err));
 
-export const webhookHandler = webhookCallback(bot, 'express')
+
+import { main } from './database'
+// export const webhookHandler = webhookCallback(bot, 'express')
+main()
